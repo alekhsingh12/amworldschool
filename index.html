@@ -182,6 +182,134 @@
                 .material-symbols-outlined.filled {
                         font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
                 }
+                /* ===========================
+   MOBILE RESPONSIVE
+   Desktop remains unchanged
+=========================== */
+
+@media screen and (max-width:768px){
+
+    html,
+    body{
+        overflow-x:hidden;
+    }
+
+    /* Navbar */
+
+    nav .max-w-container-max{
+        padding:12px 16px;
+    }
+
+    nav img{
+        height:42px !important;
+    }
+
+    nav span.font-headline-sm{
+        font-size:18px;
+    }
+
+    /* Hide desktop menu */
+
+    nav .md\:flex{
+        display:none !important;
+    }
+
+    /* Show menu icon */
+
+    .material-symbols-outlined.menu-mobile{
+        display:block !important;
+        font-size:34px;
+        cursor:pointer;
+    }
+
+    /* Hero */
+
+    #scroll-container{
+        height:260vh !important;
+    }
+
+    #slide-1,
+    #slide-4{
+        width:90%;
+        max-width:100%;
+        padding:0 20px;
+    }
+
+    #slide-1 h1{
+        font-size:34px !important;
+        line-height:42px !important;
+    }
+
+    #slide-4 h2{
+        font-size:30px !important;
+        line-height:38px !important;
+    }
+
+    #slide-1 p,
+    #slide-4 p{
+        font-size:18px !important;
+        line-height:30px !important;
+    }
+
+    /* Buttons */
+
+    button{
+        width:100%;
+    }
+
+    #slide-4 .flex{
+        width:100%;
+    }
+
+    /* About */
+
+    section.grid{
+        gap:20px;
+    }
+
+    /* Director Principal */
+
+    .group .relative.h-\[400px\]{
+        height:280px !important;
+    }
+
+    /* Cards */
+
+    .grid.md\:grid-cols-3{
+        grid-template-columns:1fr !important;
+    }
+
+    .grid.md\:grid-cols-2{
+        grid-template-columns:1fr !important;
+    }
+
+    /* CTA */
+
+    section.bg-primary{
+        text-align:center;
+    }
+
+    section.bg-primary button{
+        width:100%;
+    }
+
+    /* Footer */
+
+    footer{
+        text-align:center;
+    }
+
+    footer>div{
+        width:100%;
+        max-width:100%;
+        align-items:center;
+    }
+
+    footer .md\:items-end{
+        align-items:center !important;
+    }
+
+}
         </style>
 </head>
 
@@ -248,7 +376,9 @@
                                         </div>
 
                                 </div>
-                                <!-- <span class="material-symbols-outlined">menu</span> -->
+                                <span class="material-symbols-outlined menu-mobile md:hidden">
+                                        menu
+                                </span>
                                 </button>
 
                         </div>
