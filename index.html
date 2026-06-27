@@ -44,6 +44,7 @@
                                                 "on-tertiary-container": "#f6f5f4",
                                                 "tertiary": "#575858",
                                                 "secondary": "#5f5e5e",
+                                                "little": "#f5d0d0",
                                                 "error": "#ba1a1a",
                                                 "surface-dim": "#dadad8",
                                                 "surface-bright": "#faf9f7",
@@ -182,134 +183,135 @@
                 .material-symbols-outlined.filled {
                         font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
                 }
+
                 /* ===========================
    MOBILE RESPONSIVE
    Desktop remains unchanged
 =========================== */
 
-@media screen and (max-width:768px){
+                @media screen and (max-width:768px) {
 
-    html,
-    body{
-        overflow-x:hidden;
-    }
+                        html,
+                        body {
+                                overflow-x: hidden;
+                        }
 
-    /* Navbar */
+                        /* Navbar */
 
-    nav .max-w-container-max{
-        padding:12px 16px;
-    }
+                        nav .max-w-container-max {
+                                padding: 12px 16px;
+                        }
 
-    nav img{
-        height:42px !important;
-    }
+                        nav img {
+                                height: 42px !important;
+                        }
 
-    nav span.font-headline-sm{
-        font-size:18px;
-    }
+                        nav span.font-headline-sm {
+                                font-size: 18px;
+                        }
 
-    /* Hide desktop menu */
+                        /* Hide desktop menu */
 
-    nav .md\:flex{
-        display:none !important;
-    }
+                        nav .md\:flex {
+                                display: none !important;
+                        }
 
-    /* Show menu icon */
+                        /* Show menu icon */
 
-    .material-symbols-outlined.menu-mobile{
-        display:block !important;
-        font-size:34px;
-        cursor:pointer;
-    }
+                        .material-symbols-outlined.menu-mobile {
+                                display: block !important;
+                                font-size: 34px;
+                                cursor: pointer;
+                        }
 
-    /* Hero */
+                        /* Hero */
 
-    #scroll-container{
-        height:260vh !important;
-    }
+                        #scroll-container {
+                                height: 260vh !important;
+                        }
 
-    #slide-1,
-    #slide-4{
-        width:90%;
-        max-width:100%;
-        padding:0 20px;
-    }
+                        #slide-1,
+                        #slide-4 {
+                                width: 90%;
+                                max-width: 100%;
+                                padding: 0 20px;
+                        }
 
-    #slide-1 h1{
-        font-size:34px !important;
-        line-height:42px !important;
-    }
+                        #slide-1 h1 {
+                                font-size: 34px !important;
+                                line-height: 42px !important;
+                        }
 
-    #slide-4 h2{
-        font-size:30px !important;
-        line-height:38px !important;
-    }
+                        #slide-4 h2 {
+                                font-size: 30px !important;
+                                line-height: 38px !important;
+                        }
 
-    #slide-1 p,
-    #slide-4 p{
-        font-size:18px !important;
-        line-height:30px !important;
-    }
+                        #slide-1 p,
+                        #slide-4 p {
+                                font-size: 18px !important;
+                                line-height: 30px !important;
+                        }
 
-    /* Buttons */
+                        /* Buttons */
 
-    button{
-        width:100%;
-    }
+                        button {
+                                width: 100%;
+                        }
 
-    #slide-4 .flex{
-        width:100%;
-    }
+                        #slide-4 .flex {
+                                width: 100%;
+                        }
 
-    /* About */
+                        /* About */
 
-    section.grid{
-        gap:20px;
-    }
+                        section.grid {
+                                gap: 20px;
+                        }
 
-    /* Director Principal */
+                        /* Director Principal */
 
-    .group .relative.h-\[400px\]{
-        height:280px !important;
-    }
+                        .group .relative.h-\[400px\] {
+                                height: 280px !important;
+                        }
 
-    /* Cards */
+                        /* Cards */
 
-    .grid.md\:grid-cols-3{
-        grid-template-columns:1fr !important;
-    }
+                        .grid.md\:grid-cols-3 {
+                                grid-template-columns: 1fr !important;
+                        }
 
-    .grid.md\:grid-cols-2{
-        grid-template-columns:1fr !important;
-    }
+                        .grid.md\:grid-cols-2 {
+                                grid-template-columns: 1fr !important;
+                        }
 
-    /* CTA */
+                        /* CTA */
 
-    section.bg-primary{
-        text-align:center;
-    }
+                        section.bg-primary {
+                                text-align: center;
+                        }
 
-    section.bg-primary button{
-        width:100%;
-    }
+                        section.bg-primary button {
+                                width: 100%;
+                        }
 
-    /* Footer */
+                        /* Footer */
 
-    footer{
-        text-align:center;
-    }
+                        footer {
+                                text-align: center;
+                        }
 
-    footer>div{
-        width:100%;
-        max-width:100%;
-        align-items:center;
-    }
+                        footer>div {
+                                width: 100%;
+                                max-width: 100%;
+                                align-items: center;
+                        }
 
-    footer .md\:items-end{
-        align-items:center !important;
-    }
+                        footer .md\:items-end {
+                                align-items: center !important;
+                        }
 
-}
+                }
         </style>
 </head>
 
@@ -345,13 +347,13 @@
                         </div>
                         <div class="flex items-center gap-unit">
                                 <button
-                                        class="hidden md:inline-flex items-center justify-center px-4 py-2 bg-secondary text-primary font-label-md text-label-md rounded-lg hover:bg-secondary-fixed-dim transition-colors">Contact
+                                        class="hidden md:inline-flex items-center justify-center px-4 py-2 bg-little text-primary font-label-md text-label-md rounded-lg hover:bg-secondary-fixed-dim transition-colors">Contact
                                         Us</button>
                                 <!-- Login Dropdown -->
                                 <div class="relative group hidden md:block">
 
                                         <button
-                                                class="inline-flex items-center justify-center gap-1 px-4 py-2 bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary-container transition-all duration-300">
+                                                class="inline-flex items-center justify-center gap-1 px-4 py-1.5 bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary-container transition-all duration-300">
                                                 Login
                                                 <span
                                                         class="material-symbols-outlined text-lg transition-transform duration-300 group-hover:rotate-180">
@@ -379,7 +381,6 @@
                                 <span class="material-symbols-outlined menu-mobile md:hidden">
                                         menu
                                 </span>
-                                </button>
 
                         </div>
                 </div>
@@ -421,7 +422,7 @@
                                                 <h1
                                                         class="font-display-lg text-display-lg md:text-[64px] md:leading-[72px] font-bold tracking-tight text-on-background drop-shadow-sm">
                                                         AM World School</h1>
-                                                <p
+                                                <p id="little"
                                                         class="font-body-lg text-body-lg md:text-[24px] md:leading-[32px] text-secondary font-medium">
                                                         Little Hands will win the World</p>
                                                 <div class="flex items-center gap-2 mt-4 text-primary animate-bounce">
@@ -672,7 +673,7 @@
                                 </div>
                                 <div class="relative z-10 whitespace-nowrap">
                                         <button
-                                                class="px-8 py-4 bg-secondary text-primary font-label-md text-label-md rounded-lg hover:bg-secondary-container transition-colors shadow-md">Schedule
+                                                class="px-8 py-4 bg-little text-primary font-label-md text-label-md rounded-lg hover:bg-secondary-container transition-colors shadow-md">Schedule
                                                 a Visit</button>
                                 </div>
                         </section>
@@ -747,7 +748,7 @@
                                 // Frame URL constructor (1-indexed frames: ezgif-frame-001.jpg to ezgif-frame-288.jpg)
                                 const getFrameUrl = (index) => {
                                         const padded = String(index).padStart(3, "0");
-                                        return `ezgif-frame-${padded}.jpg`;
+                                        return `../frames/ezgif-frame-${padded}.jpg`;
                                 };
 
                                 // Render a specific image on the canvas matching cover aspect ratio
