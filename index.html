@@ -748,7 +748,7 @@
                                 // Frame URL constructor (1-indexed frames: ezgif-frame-001.jpg to ezgif-frame-288.jpg)
                                 const getFrameUrl = (index) => {
                                         const padded = String(index).padStart(3, "0");
-                                        return `../frames/ezgif-frame-${padded}.jpg`;
+                                        return `ezgif-frame-${padded}.jpg`;
                                 };
 
                                 // Render a specific image on the canvas matching cover aspect ratio
