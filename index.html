@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>AM World School | Little Hands will win the World</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&amp;family=Playfair+Display:wght@600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&amp;display=swap"
+                rel="stylesheet" />
+        <link href="favicon-96x96.png" rel="icon" type="image/png" />
+
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "outline-variant": "#e9bcb5",
+                                                "background": "#faf9f7",
+                                                "tertiary-fixed": "#e3e2e2",
+                                                "on-secondary": "#ffffff",
+                                                "on-tertiary-fixed": "#1b1c1c",
+                                                "primary-container": "#e30003",
+                                                "inverse-surface": "#2f3130",
+                                                "surface": "#faf9f7",
+                                                "secondary-fixed-dim": "#c8c6c5",
+                                                "surface-tint": "#c00002",
+                                                "inverse-on-surface": "#f1f1ef",
+                                                "surface-container": "#efeeec",
+                                                "on-background": "#1a1c1b",
+                                                "tertiary-container": "#707070",
+                                                "surface-container-lowest": "#ffffff",
+                                                "on-primary-fixed-variant": "#930001",
+                                                "on-secondary-fixed": "#1c1b1b",
+                                                "surface-container-low": "#f4f3f1",
+                                                "surface-container-high": "#e9e8e6",
+                                                "surface-variant": "#e3e2e0",
+                                                "on-tertiary-container": "#f6f5f4",
+                                                "tertiary": "#575858",
+                                                "secondary": "#5f5e5e",
+                                                "error": "#ba1a1a",
+                                                "surface-dim": "#dadad8",
+                                                "surface-bright": "#faf9f7",
+                                                "on-surface": "#1a1c1b",
+                                                "outline": "#946e68",
+                                                "primary-fixed": "#ffdad4",
+                                                "inverse-primary": "#ffb4a8",
+                                                "on-tertiary": "#ffffff",
+                                                "on-error": "#ffffff",
+                                                "on-tertiary-fixed-variant": "#464747",
+                                                "on-surface-variant": "#5f3f3a",
+                                                "error-container": "#ffdad6",
+                                                "on-error-container": "#93000a",
+                                                "on-secondary-fixed-variant": "#474746",
+                                                "on-secondary-container": "#636262",
+                                                "on-primary": "#ffffff",
+                                                "secondary-container": "#e2dfde",
+                                                "tertiary-fixed-dim": "#c7c6c6",
+                                                "secondary-fixed": "#e5e2e1",
+                                                "primary-fixed-dim": "#ffb4a8",
+                                                "on-primary-container": "#fff3f2",
+                                                "surface-container-highest": "#e3e2e0",
+                                                "on-primary-fixed": "#410000",
+                                                "primary": "#b40002"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.25rem",
+                                                "lg": "0.5rem",
+                                                "xl": "0.75rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {
+                                                "gutter": "24px",
+                                                "unit": "4px",
+                                                "container-max": "1120px",
+                                                "margin-mobile": "20px",
+                                                "margin-desktop": "64px"
+                                        },
+                                        "fontFamily": {
+                                                "body-md": [
+                                                        "\"Source Serif 4\""
+                                                ],
+                                                "body-lg": [
+                                                        "\"Source Serif 4\""
+                                                ],
+                                                "display-lg-mobile": [
+                                                        "Playfair Display"
+                                                ],
+                                                "label-sm": [
+                                                        "Inter"
+                                                ],
+                                                "display-lg": [
+                                                        "Playfair Display"
+                                                ],
+                                                "label-md": [
+                                                        "Inter"
+                                                ],
+                                                "headline-sm": [
+                                                        "Playfair Display"
+                                                ],
+                                                "headline-md": [
+                                                        "Playfair Display"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "28px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "body-lg": [
+                                                        "18px",
+                                                        {
+                                                                "lineHeight": "32px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "display-lg-mobile": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "40px",
+                                                                "letterSpacing": "-0.01em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "label-sm": [
+                                                        "12px",
+                                                        {
+                                                                "lineHeight": "16px",
+                                                                "letterSpacing": "0.03em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "display-lg": [
+                                                        "48px",
+                                                        {
+                                                                "lineHeight": "56px",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "label-md": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "20px",
+                                                                "letterSpacing": "0.05em",
+                                                                "fontWeight": "500"
+                                                        }
+                                                ],
+                                                "headline-sm": [
+                                                        "24px",
+                                                        {
+                                                                "lineHeight": "32px",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-md": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "40px",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                .material-symbols-outlined {
+                        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+                }
+
+                .material-symbols-outlined.filled {
+                        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+                }
+        </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen">
+        <!-- TopNavBar -->
+        <nav class="bg-surface shadow-sm docked full-width top-0 sticky z-50">
+                <div class="flex justify-between items-center px-gutter py-unit w-full max-w-container-max mx-auto">
+                        <a href="#" class="flex items-center gap-3">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXLsL8wtOL2iXMqL66jUFdeE-CxQZtxRT_l_b7DAlQhA&s=10"
+                                        alt="AM World School Logo" class="h-12 w-auto object-contain"
+                                        onerror="this.style.display='none'" />
+                                <span class="font-headline-sm text-headline-sm text-primary font-bold hidden sm:inline">
+                                        AM World School
+                                </span>
+                        </a>
+
+                        <!-- <div class="font-headline-sm text-headline-sm text-primary font-bold">
+                                AM World School
+                        </div> -->
+                        <div class="hidden md:flex items-center gap-gutter font-label-md text-label-md">
+                                <a class="text-primary border-b-2 border-secondary font-bold pb-1 transition-colors duration-200"
+                                        href="index.html">Home</a>
+                                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-200"
+                                        href="about_us.html">About Us</a>
+                                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-200"
+                                        href="admission.html">Admissions</a>
+                                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-200"
+                                        href="academic.html">Academic</a>
+                                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-200"
+                                        href="downloads.html">Downloads</a>
+                                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-200"
+                                        href="facilities.html">Facilities</a>
+                        </div>
+                        <div class="flex items-center gap-unit">
+                                <button
+                                        class="hidden md:inline-flex items-center justify-center px-4 py-2 bg-secondary text-primary font-label-md text-label-md rounded-lg hover:bg-secondary-fixed-dim transition-colors">Contact
+                                        Us</button>
+                                <button
+                                        class="inline-flex items-center justify-center px-4 py-2 bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary-container transition-colors">Login</button>
+                                <button class="md:hidden text-primary p-2">
+                                        <span class="material-symbols-outlined">menu</span>
+                                </button>
+                        </div>
+                </div>
+        </nav>
+        <main class="flex-grow flex flex-col gap-margin-desktop pb-margin-desktop">
+                <!-- Hero Section with Scroll Animation -->
+                <section id="scroll-container" class="relative w-full h-[400vh] bg-background">
+                        <div id="sticky-wrapper"
+                                class="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center justify-center bg-background">
+                                <!-- The Canvas displaying the frame -->
+                                <canvas id="scroll-canvas" class="absolute inset-0 w-full h-full object-cover"></canvas>
+
+                                <!-- Smooth overlay to darken/soften the canvas background for text legibility -->
+                                <div
+                                        class="absolute inset-0 bg-gradient-to-b from-transparent via-background/10 to-background/30 pointer-events-none">
+                                </div>
+
+                                <!-- Preloader overlay -->
+                                <div id="canvas-loader"
+                                        class="absolute inset-0 flex flex-col items-center justify-center bg-background z-20 transition-opacity duration-500">
+                                        <div
+                                                class="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin">
+                                        </div>
+                                        <p
+                                                class="mt-4 font-label-md text-label-md text-secondary tracking-widest uppercase">
+                                                Loading Your Child's Success...</p>
+                                </div>
+
+                                <!-- Editorial Text Slides -->
+                                <div
+                                        class="relative z-10 max-w-container-max mx-auto px-gutter w-full h-full flex items-center justify-center pointer-events-none">
+
+                                        <!-- Slide 1: Welcome -->
+                                        <div id="slide-1"
+                                                class="absolute flex flex-col items-center text-center gap-4 transition-all duration-300 opacity-0 transform translate-y-10 max-w-3xl">
+                                                <span
+                                                        class="font-label-sm text-label-sm text-primary tracking-widest uppercase bg-primary-container/10 px-4 py-1.5 rounded-full border border-primary/20">Welcome
+                                                        to Excellence</span>
+                                                <h1
+                                                        class="font-display-lg text-display-lg md:text-[64px] md:leading-[72px] font-bold tracking-tight text-on-background drop-shadow-sm">
+                                                        AM World School</h1>
+                                                <p
+                                                        class="font-body-lg text-body-lg md:text-[24px] md:leading-[32px] text-secondary font-medium">
+                                                        Little Hands will win the World</p>
+                                                <div class="flex items-center gap-2 mt-4 text-primary animate-bounce">
+                                                        <span class="font-label-sm text-label-sm">Scroll to begin</span>
+                                                        <span
+                                                                class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+                                                </div>
+                                        </div>
+
+                                        <!-- Slide 2: Tradition & Heritage (Dome Reveal) -->
+                                        <!-- <div id="slide-2"
+                                                class="absolute flex flex-col items-center text-center gap-4 transition-all duration-300 opacity-0 transform translate-y-10 max-w-3xl">
+                                                <span
+                                                        class="font-label-sm text-label-sm text-primary tracking-widest uppercase bg-primary-container/10 px-4 py-1.5 rounded-full border border-primary/20">Tradition
+                                                        & Heritage</span>
+                                                <h2
+                                                        class="font-headline-md text-headline-md md:text-[48px] md:leading-[56px] font-bold text-on-background">
+                                                        A Sanctuary of Scholarship</h2>
+                                                <p class="font-body-lg text-body-lg text-secondary">A legacy where
+                                                        traditional values meet academic innovation, building leaders
+                                                        since 1995.</p>
+                                        </div> -->
+
+                                        <!-- Slide 3: World-Class Architecture (Facade Reveal) -->
+                                        <!-- <div id="slide-3"
+                                                class="absolute flex flex-col items-center text-center gap-4 transition-all duration-300 opacity-0 transform translate-y-10 max-w-3xl">
+                                                <span
+                                                        class="font-label-sm text-label-sm text-primary tracking-widest uppercase bg-primary-container/10 px-4 py-1.5 rounded-full border border-primary/20">Modern
+                                                        Campus</span>
+                                                <h2
+                                                        class="font-headline-md text-headline-md md:text-[48px] md:leading-[56px] font-bold text-on-background">
+                                                        Inspiring Environments</h2>
+                                                <p class="font-body-lg text-body-lg text-secondary">Architectural
+                                                        grandeur designed to inspire focused calm, intellectual clarity,
+                                                        and collaboration.</p>
+                                        </div> -->
+
+                                        <!-- Slide 4: Interactive Admissions / Virtual Tour -->
+                                        <div id="slide-4"
+                                                class="absolute flex flex-col items-center text-center gap-4 transition-all duration-300 opacity-0 transform translate-y-10 max-w-3xl pointer-events-auto">
+                                                <span
+                                                        class="font-label-sm text-label-sm text-primary tracking-widest uppercase bg-primary-container/10 px-4 py-1.5 rounded-full border border-primary/20">Your
+                                                        Journey Begins</span>
+                                                <h2
+                                                        class="font-headline-md text-headline-md md:text-[48px] md:leading-[56px] font-bold text-on-background">
+                                                        Shape Your Future With Us</h2>
+                                                <p class="font-body-lg text-body-lg text-secondary max-w-xl">
+                                                        Applications for the upcoming academic year are now open.
+                                                        Explore our campus and begin your path to prestige.</p>
+                                                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                                                        <button class="px-8 py-3 bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm"
+                                                                onclick="alert('Proceeding to Admissions application!')">Apply
+                                                                Online</button>
+                                                        <button class="px-8 py-3 bg-transparent border border-on-background text-on-background font-label-md text-label-md hover:bg-on-background/5 transition-colors"
+                                                                onclick="document.getElementById('scroll-container').nextElementSibling.scrollIntoView({ behavior: 'smooth' })">Learn
+                                                                More</button>
+                                                </div>
+                                        </div>
+
+                                </div>
+                        </div>
+                </section>
+                <div class="max-w-container-max mx-auto w-full px-gutter flex flex-col gap-margin-desktop">
+                        <!-- About Section (Bento Grid Style) -->
+                        <section class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                                <div
+                                        class="md:col-span-2 bg-surface-container-lowest p-gutter rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col justify-center">
+                                        <h2 class="font-headline-sm text-headline-sm text-primary mb-unit">A Legacy of
+                                                Excellence</h2>
+                                        <p class="font-body-md text-body-md text-on-surface-variant mb-gutter">
+                                                Since our founding, AM World School has been dedicated to cultivating an
+                                                environment where tradition meets innovation. We believe in providing a
+                                                holistic education that challenges the intellect, nurtures the spirit,
+                                                and prepares students to become compassionate global citizens.
+                                        </p>
+                                        <a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md hover:text-secondary-container transition-colors w-fit"
+                                                href="#">
+                                                Discover Our History <span
+                                                        class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                        </a>
+                                </div>
+                                <div
+                                        class="bg-primary p-gutter rounded-xl flex flex-col items-center justify-center text-center shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+                                        <span
+                                                class="material-symbols-outlined text-[48px] text-secondary mb-unit">school</span>
+                                        <h3 class="font-headline-sm text-headline-sm text-on-primary mb-1">100%</h3>
+                                        <p class="font-body-md text-body-md text-inverse-primary">College Acceptance
+                                                Rate</p>
+                                </div>
+                        </section>
+                        <!-- Messages Section -->
+                        <section class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                                <!-- Director's Message -->
+                                <div
+                                        class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col group">
+                                        <div class="relative h-[400px] w-full overflow-hidden">
+                                                <img alt="Director"
+                                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                        src="https://amworldschool.com/school_images/school_director.jpeg" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                                                </div>
+                                                <div class="absolute bottom-0 left-0 p-gutter text-on-primary">
+                                                        <h2
+                                                                class="font-headline-md text-headline-md md:font-headline-md md:text-headline-md font-display-lg-mobile text-display-lg-mobile mb-1">
+                                                                Director's Message</h2>
+                                                        <p class="font-label-md text-label-md text-inverse-primary">Mr.
+                                                                Anup Mangal</p>
+                                                </div>
+                                        </div>
+                                        <div class="p-gutter flex-grow">
+                                                <p
+                                                        class="font-body-md text-body-md text-on-surface-variant italic mb-gutter relative mt-4">
+                                                        <span
+                                                                class="material-symbols-outlined absolute -top-4 -left-4 text-[32px] text-surface-variant opacity-50">format_quote</span>
+                                                        "Our vision is to create an educational sanctuary where every
+                                                        student's potential is recognized, nurtured, and celebrated. We
+                                                        strive to instill a lifelong love of learning and a commitment
+                                                        to serving the global community."
+                                                </p>
+                                                <a class="inline-flex items-center gap-2 text-primary font-label-md text-label-md hover:text-primary-container transition-colors"
+                                                        href="#">
+                                                        Read Full Message <span
+                                                                class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+                                                </a>
+                                        </div>
+                                </div>
+                                <!-- Principal's Message -->
+                                <div
+                                        class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col group">
+                                        <div class="relative h-[400px] w-full overflow-hidden">
+                                                <img alt="Principal"
+                                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                        src="https://amworldschool.com/school_images/school_principle.jpeg" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                                                </div>
+                                                <div class="absolute bottom-0 left-0 p-gutter text-on-primary">
+                                                        <h2
+                                                                class="font-headline-md text-headline-md md:font-headline-md md:text-headline-md font-display-lg-mobile text-display-lg-mobile mb-1">
+                                                                Principal's Message</h2>
+                                                        <p class="font-label-md text-label-md text-inverse-primary">Mr.
+                                                                Kuldeep Singh</p>
+                                                </div>
+                                        </div>
+                                        <div class="p-gutter flex-grow">
+                                                <p
+                                                        class="font-body-md text-body-md text-on-surface-variant italic mb-gutter relative mt-4">
+                                                        <span
+                                                                class="material-symbols-outlined absolute -top-4 -left-4 text-[32px] text-surface-variant opacity-50">format_quote</span>
+                                                        "Academic excellence is not just about rigorous coursework; it's
+                                                        about fostering intellectual curiosity and resilience. We are
+                                                        committed to guiding our students through a transformative
+                                                        journey of personal and academic growth."
+                                                </p>
+                                                <a class="inline-flex items-center gap-2 text-primary font-label-md text-label-md hover:text-primary-container transition-colors"
+                                                        href="#">
+                                                        Read Full Message <span
+                                                                class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+                                                </a>
+                                        </div>
+                                </div>
+                        </section>
+                        <!-- Key Highlights (Glassmorphism inspired cards) -->
+                        <section class="py-margin-desktop">
+                                <div class="text-center mb-margin-desktop">
+                                        <h2 class="font-headline-md text-headline-md text-primary mb-unit">Why Choose AM
+                                                World School?</h2>
+                                        <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                                                Discover the pillars that support our commitment to providing an
+                                                unparalleled educational experience.</p>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                                        <!-- Academics -->
+                                        <div
+                                                class="group bg-surface-container-lowest p-gutter rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-variant hover:border-secondary hover:shadow-[0px_8px_30px_rgba(121,89,0,0.1)] transition-all duration-300 relative overflow-hidden">
+                                                <div
+                                                        class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                                        <span
+                                                                class="material-symbols-outlined text-[120px] text-primary">menu_book</span>
+                                                </div>
+                                                <div
+                                                        class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center mb-gutter text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                                                        <span class="material-symbols-outlined">menu_book</span>
+                                                </div>
+                                                <h3 class="font-headline-sm text-headline-sm text-primary mb-unit">
+                                                        Rigorous Academics</h3>
+                                                <p class="font-body-md text-body-md text-on-surface-variant mb-gutter">A
+                                                        comprehensive curriculum designed to challenge students and
+                                                        foster critical thinking skills.</p>
+                                                <a class="inline-flex items-center gap-1 text-secondary font-label-md text-label-md hover:underline mt-auto"
+                                                        href="#">Explore Programs</a>
+                                        </div>
+                                        <!-- Facilities -->
+                                        <div
+                                                class="group bg-surface-container-lowest p-gutter rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-variant hover:border-secondary hover:shadow-[0px_8px_30px_rgba(121,89,0,0.1)] transition-all duration-300 relative overflow-hidden">
+                                                <div
+                                                        class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                                        <span
+                                                                class="material-symbols-outlined text-[120px] text-primary">architecture</span>
+                                                </div>
+                                                <div
+                                                        class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center mb-gutter text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                                                        <span class="material-symbols-outlined">architecture</span>
+                                                </div>
+                                                <h3 class="font-headline-sm text-headline-sm text-primary mb-unit">
+                                                        World-Class Facilities</h3>
+                                                <p class="font-body-md text-body-md text-on-surface-variant mb-gutter">
+                                                        State-of-the-art science labs, expansive sports complexes, and
+                                                        modern arts centers.</p>
+                                                <a class="inline-flex items-center gap-1 text-secondary font-label-md text-label-md hover:underline mt-auto"
+                                                        href="#">View Campus</a>
+                                        </div>
+                                        <!-- Admissions -->
+                                        <div
+                                                class="group bg-surface-container-lowest p-gutter rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-variant hover:border-secondary hover:shadow-[0px_8px_30px_rgba(121,89,0,0.1)] transition-all duration-300 relative overflow-hidden">
+                                                <div
+                                                        class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                                        <span
+                                                                class="material-symbols-outlined text-[120px] text-primary">how_to_reg</span>
+                                                </div>
+                                                <div
+                                                        class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center mb-gutter text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                                                        <span class="material-symbols-outlined">how_to_reg</span>
+                                                </div>
+                                                <h3 class="font-headline-sm text-headline-sm text-primary mb-unit">
+                                                        Seamless Admissions</h3>
+                                                <p class="font-body-md text-body-md text-on-surface-variant mb-gutter">A
+                                                        transparent and supportive enrollment process to welcome new
+                                                        families to our community.</p>
+                                                <a class="inline-flex items-center gap-1 text-secondary font-label-md text-label-md hover:underline mt-auto"
+                                                        href="#">Apply Today</a>
+                                        </div>
+                                </div>
+                        </section>
+                        <!-- Call to Action Banner -->
+                        <section
+                                class="bg-primary text-on-primary rounded-xl p-gutter md:p-margin-desktop flex flex-col md:flex-row items-center justify-between gap-gutter shadow-[0px_4px_20px_rgba(0,0,0,0.1)] relative overflow-hidden">
+                                <div class="absolute inset-0 opacity-10 pointer-events-none"
+                                        style="background-image: radial-gradient(circle at 100% 100%, #ffffff 0%, transparent 50%);">
+                                </div>
+                                <div class="max-w-2xl relative z-10">
+                                        <h2 class="font-headline-md text-headline-md mb-unit text-secondary-container">
+                                                Ready to take the next step?</h2>
+                                        <p class="font-body-lg text-body-lg text-inverse-primary">Join us for an
+                                                upcoming open house event or schedule a private campus tour to
+                                                experience AM World School firsthand.</p>
+                                </div>
+                                <div class="relative z-10 whitespace-nowrap">
+                                        <button
+                                                class="px-8 py-4 bg-secondary text-primary font-label-md text-label-md rounded-lg hover:bg-secondary-container transition-colors shadow-md">Schedule
+                                                a Visit</button>
+                                </div>
+                        </section>
+                </div>
+        </main>
+        <!-- Footer -->
+        <footer
+                class="bg-primary w-full px-gutter py-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter mt-auto">
+                <div class="flex flex-col gap-unit max-w-xs">
+                        <div class="font-headline-sm text-headline-sm text-secondary-container">
+                                AM World School
+                        </div>
+                        <p class="font-body-md text-body-md text-on-primary opacity-80">
+                                Little Hands will win the World.
+                                <br />
+                                A premier institution dedicated to
+                                academic excellence.
+                        </p>
+                </div>
+                <div class="flex flex-col gap-unit">
+                        <h4 class="font-label-md text-label-md text-secondary-container font-bold mb-1">Links</h4>
+                        <div class="flex flex-col gap-1 font-body-md text-body-md text-on-primary opacity-80">
+                                <a class="hover:text-secondary-fixed transition-colors duration-200" href="#">Quick
+                                        Links</a>
+                                <a class="hover:text-secondary-fixed transition-colors duration-200" href="#">News &amp;
+                                        Events</a>
+                                <a class="hover:text-secondary-fixed transition-colors duration-200"
+                                        href="#">Gallery</a>
+                                <a class="hover:text-secondary-fixed transition-colors duration-200" href="#">Privacy
+                                        Policy</a>
+                        </div>
+                </div>
+                <div class="flex flex-col gap-unit">
+                        <h4 class="font-label-md text-label-md text-secondary-container font-bold mb-1">Contact Info
+                        </h4>
+                        <div class="flex flex-col gap-unit font-body-md text-body-md text-on-primary opacity-80">
+                                <div class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>AM WORLD SCHOOL,Bahjoi Road Maulagarh Chandausi, Sambhal
+                                                <br />
+                                                Pin code: 244412</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-[18px]">phone</span>
+                                        <span>+91 9012688800,+91 8002148800</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-[18px]">mail</span>
+                                        <span>amworldschools@gmail.com</span>
+                                </div>
+                        </div>
+                </div>
+                <div
+                        class="w-full md:w-auto mt-gutter md:mt-0 pt-gutter border-t border-primary-container md:border-none flex flex-col md:items-end md:self-end">
+                        <p class="font-body-md text-body-md text-on-primary opacity-60">
+                                © 2026 AM World School. All rights reserved.
+                        </p>
+                </div>
+                <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                                const canvas = document.getElementById("scroll-canvas");
+                                const context = canvas.getContext("2d");
+                                const scrollContainer = document.getElementById("scroll-container");
+                                const loader = document.getElementById("canvas-loader");
+
+                                const frameCount = 288;
+                                const images = [];
+                                let loadedCount = 0;
+                                let animationFrameId = null;
+                                let lastFrameIndex = -1;
+
+                                // Frame URL constructor (1-indexed frames: ezgif-frame-001.jpg to ezgif-frame-288.jpg)
+                                const getFrameUrl = (index) => {
+                                        const padded = String(index).padStart(3, "0");
+                                        return `../frames/ezgif-frame-${padded}.jpg`;
+                                };
+
+                                // Render a specific image on the canvas matching cover aspect ratio
+                                const renderFrame = (img) => {
+                                        if (!img) return;
+
+                                        // Set canvas dimensions to match display dimensions
+                                        canvas.width = canvas.offsetWidth;
+                                        canvas.height = canvas.offsetHeight;
+
+                                        const imgWidth = img.naturalWidth;
+                                        const imgHeight = img.naturalHeight;
+
+                                        if (!imgWidth || !imgHeight) return;
+
+                                        // Calculate scale factor for 'cover' fit
+                                        const scale = Math.max(canvas.width / imgWidth, canvas.height / imgHeight);
+                                        const x = (canvas.width / 2) - (imgWidth / 2) * scale;
+                                        const y = (canvas.height / 2) - (imgHeight / 2) * scale;
+
+                                        context.clearRect(0, 0, canvas.width, canvas.height);
+                                        context.drawImage(img, x, y, imgWidth * scale, imgHeight * scale);
+                                };
+
+                                // Text slides config with activation ranges
+                                const textSlides = [
+                                        { id: "slide-1", start: 0.0, activeStart: 0.0, activeEnd: 0.20, end: 0.25 },
+                                        { id: "slide-2", start: 0.25, activeStart: 0.28, activeEnd: 0.48, end: 0.53 },
+                                        { id: "slide-3", start: 0.53, activeStart: 0.56, activeEnd: 0.76, end: 0.81 },
+                                        { id: "slide-4", start: 0.81, activeStart: 0.85, activeEnd: 1.0, end: 1.0 }
+                                ];
+
+                                // Update text slide opacities based on scroll fraction
+                                const updateTextOverlays = (fraction) => {
+                                        textSlides.forEach(slide => {
+                                                const el = document.getElementById(slide.id);
+                                                if (!el) return;
+
+                                                let opacity = 0;
+                                                if (fraction >= slide.start && fraction <= slide.end) {
+                                                        if (fraction < slide.activeStart) {
+                                                                // Fade in
+                                                                opacity = (fraction - slide.start) / (slide.activeStart - slide.start);
+                                                        } else if (fraction > slide.activeEnd) {
+                                                                // Fade out (except for the last slide, which stays visible)
+                                                                if (slide.end === 1.0 && slide.activeEnd === 1.0) {
+                                                                        opacity = 1;
+                                                                } else if (slide.id === "slide-4") {
+                                                                        opacity = 1;
+                                                                } else {
+                                                                        opacity = 1 - (fraction - slide.activeEnd) / (slide.end - slide.activeEnd);
+                                                                }
+                                                        } else {
+                                                                opacity = 1;
+                                                        }
+                                                }
+
+                                                el.style.opacity = opacity;
+                                                // Fade/slide effect: slightly slide up as it fades in
+                                                const translateY = (1 - opacity) * 20;
+                                                el.style.transform = `translateY(${translateY}px)`;
+
+                                                // Control pointer events: only enable clicks on the active interactive slide (slide 4)
+                                                if (opacity > 0.5 && slide.id === "slide-4") {
+                                                        el.style.pointerEvents = "auto";
+                                                } else {
+                                                        el.style.pointerEvents = "none";
+                                                }
+                                        });
+                                };
+
+                                // Main tick function to sync frame drawing and text overlays
+                                const tick = () => {
+                                        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                                        const containerTop = scrollContainer.offsetTop;
+                                        const containerHeight = scrollContainer.offsetHeight;
+                                        const windowHeight = window.innerHeight;
+
+                                        const relativeScroll = scrollTop - containerTop;
+                                        const maxScroll = containerHeight - windowHeight;
+
+                                        let fraction = 0;
+                                        if (relativeScroll > 0) {
+                                                fraction = Math.min(1.0, relativeScroll / maxScroll);
+                                        }
+
+                                        // Map fraction [0.0 - 1.0] to frame [0 - 287]
+                                        const frameIndex = Math.min(frameCount - 1, Math.floor(fraction * frameCount));
+
+                                        // Only redraw if frame index has changed
+                                        if (frameIndex !== lastFrameIndex) {
+                                                const img = images[frameIndex];
+                                                if (img && img.complete) {
+                                                        renderFrame(img);
+                                                        lastFrameIndex = frameIndex;
+                                                }
+                                        }
+
+                                        updateTextOverlays(fraction);
+                                };
+
+                                // Throttled scroll listener using requestAnimationFrame
+                                const onScroll = () => {
+                                        if (animationFrameId) {
+                                                cancelAnimationFrame(animationFrameId);
+                                        }
+                                        animationFrameId = requestAnimationFrame(tick);
+                                };
+
+                                // Handle window resizing
+                                const onResize = () => {
+                                        if (lastFrameIndex >= 0) {
+                                                renderFrame(images[lastFrameIndex]);
+                                        }
+                                };
+
+                                // Start preloading images
+                                let firstFrameRendered = false;
+                                for (let i = 1; i <= frameCount; i++) {
+                                        const img = new Image();
+                                        img.src = getFrameUrl(i);
+                                        img.onload = () => {
+                                                loadedCount++;
+
+                                                // Render first frame as soon as it's ready to avoid layout shift
+                                                if (i === 1 && !firstFrameRendered) {
+                                                        renderFrame(img);
+                                                        firstFrameRendered = true;
+                                                        lastFrameIndex = 0;
+                                                        updateTextOverlays(0);
+                                                        // Hide loader early once first frame is available
+                                                        if (loader) {
+                                                                loader.classList.add("opacity-0");
+                                                                setTimeout(() => loader.remove(), 500);
+                                                        }
+                                                }
+
+                                                // If scroll position is already down the page when loaded, render appropriate frame
+                                                if (loadedCount === frameCount) {
+                                                        tick();
+                                                }
+                                        };
+                                        images.push(img);
+                                }
+
+                                window.addEventListener("scroll", onScroll);
+                                window.addEventListener("resize", onResize);
+                        });
+                </script>
+</body>
+
+</html>
