@@ -1,0 +1,32 @@
+.phone-flip {
+    width: min(300px, 80vw);
+    aspect-ratio: 300 / 610;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.phone-flip.flipped {
+    transform: rotateY(180deg);
+}
+
+.phone-face {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.phone-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 32px;
+}
+
+.phone-back {
+    transform: rotateY(180deg);
+}

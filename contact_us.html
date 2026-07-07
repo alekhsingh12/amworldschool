@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind.js"></script>
+    <link rel="stylesheet" href="design.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet">
@@ -19,389 +21,7 @@
 
     <link href="favicon-96x96.png" rel="icon" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
 
-        .material-symbols-outlined.filled {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
-        /* Glass Navbar */
-        /* Dynamic Island Navbar */
-
-        .glass-nav {
-            background: rgba(255, 255, 255, .18);
-            backdrop-filter: blur(28px) saturate(180%);
-            -webkit-backdrop-filter: blur(28px) saturate(180%);
-
-            border: 1px solid rgba(255, 255, 255, .22);
-
-            border-radius: 999px;
-
-            box-shadow:
-                0 10px 35px rgba(0, 0, 0, .14),
-                inset 0 1px 1px rgba(255, 255, 255, .35);
-
-            transition: all .35s ease;
-
-            overflow: visible;
-        }
-
-        .glass-nav:hover {
-            transform: translateX(-50%) translateY(-2px);
-            background: rgba(255, 255, 255, .22);
-            box-shadow:
-                0 18px 45px rgba(0, 0, 0, .18),
-                inset 0 1px 1px rgba(255, 255, 255, .4);
-        }
-
-        /* Desktop */
-        #scroll-container {
-            height: 400vh;
-        }
-
-        @media (max-width:768px) {
-
-            #scroll-container {
-                height: 220vh;
-            }
-
-        }
-
-        /* ===========================
-   MOBILE RESPONSIVE
-   Desktop remains unchanged
-=========================== */
-
-        @media screen and (max-width:768px) {
-
-            /* html,
-                        body {
-                                overflow-x: hidden;
-                        } */
-            /* Mobile Scroll Animation */
-            #scroll-container {
-                height: 180vh !important;
-            }
-
-            #sticky-wrapper {
-                height: 100vh !important;
-            }
-
-            #scroll-canvas {
-                object-fit: contain !important;
-            }
-
-            /* Text positioning */
-            #slide-1,
-            #slide-4 {
-                width: 95%;
-                max-width: 95%;
-                padding: 0 16px;
-            }
-
-            /* Optional: keep text lower on mobile */
-            /* #slide-1,
-                        #slide-4 {
-                                top: 55%;
-                                transform: translateY(-50%);
-                        } */
-
-            /* Navbar */
-
-            nav .max-w-container-max {
-                padding: 12px 16px;
-            }
-
-            nav img {
-                height: 42px !important;
-            }
-
-            nav span.font-headline-sm {
-                font-size: 18px;
-            }
-
-            /* Hide desktop menu */
-
-            nav .md\:flex {
-                display: none !important;
-            }
-
-            /* Show menu icon */
-
-            .material-symbols-outlined.menu-mobile {
-                display: block !important;
-                font-size: 34px;
-                cursor: pointer;
-            }
-
-            /* Hero */
-
-            #scroll-container {
-                height: 260vh !important;
-            }
-
-            #slide-1,
-            #slide-4 {
-                width: 90%;
-                max-width: 100%;
-                padding: 0 20px;
-            }
-
-            #slide-1 h1 {
-                font-size: 34px !important;
-                line-height: 42px !important;
-            }
-
-            #slide-4 h2 {
-                font-size: 30px !important;
-                line-height: 38px !important;
-            }
-
-            #slide-1 p,
-            #slide-4 p {
-                font-size: 18px !important;
-                line-height: 30px !important;
-            }
-
-            /* Buttons */
-
-            button {
-                width: 100%;
-            }
-
-            #slide-4 .flex {
-                width: 100%;
-            }
-
-            /* About */
-
-            section.grid {
-                gap: 20px;
-            }
-
-            /* Director Principal */
-
-            .group .relative.h-\[400px\] {
-                height: 280px !important;
-            }
-
-            /* Cards */
-
-            .grid.md\:grid-cols-3 {
-                grid-template-columns: 1fr !important;
-            }
-
-            .grid.md\:grid-cols-2 {
-                grid-template-columns: 1fr !important;
-            }
-
-            /* CTA */
-
-            section.bg-primary {
-                text-align: center;
-            }
-
-            section.bg-primary button {
-                width: 100%;
-            }
-
-            /* Footer */
-
-            footer {
-                text-align: center;
-            }
-
-            footer>div {
-                width: 100%;
-                max-width: 100%;
-                align-items: center;
-            }
-
-            footer .md\:items-end {
-                align-items: center !important;
-            }
-
-        }
-
-        @media (max-width:768px) {
-
-            .glass-nav {
-
-                width: 90%;
-                top: 12px;
-
-                border-radius: 999px;
-
-            }
-
-            .glass-nav>div {
-                padding: 12px 18px;
-            }
-        }
-    </style>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "outline-variant": "#e9bcb5",
-                        "background": "#faf9f7",
-                        "tertiary-fixed": "#e3e2e2",
-                        "on-secondary": "#ffffff",
-                        "on-tertiary-fixed": "#1b1c1c",
-                        "primary-container": "#e30003",
-                        "inverse-surface": "#2f3130",
-                        "surface": "#faf9f7",
-                        "secondary-fixed-dim": "#c8c6c5",
-                        "surface-tint": "#c00002",
-                        "inverse-on-surface": "#f1f1ef",
-                        "surface-container": "#efeeec",
-                        "on-background": "#1a1c1b",
-                        "tertiary-container": "#707070",
-                        "surface-container-lowest": "#ffffff",
-                        "on-primary-fixed-variant": "#930001",
-                        "on-secondary-fixed": "#1c1b1b",
-                        "surface-container-low": "#f4f3f1",
-                        "surface-container-high": "#e9e8e6",
-                        "surface-variant": "#e3e2e0",
-                        "on-tertiary-container": "#f6f5f4",
-                        "tertiary": "#575858",
-                        "secondary": "#5f5e5e",
-                        "little": "#f5d0d0",
-                        "error": "#ba1a1a",
-                        "surface-dim": "#dadad8",
-                        "surface-bright": "#faf9f7",
-                        "on-surface": "#1a1c1b",
-                        "outline": "#946e68",
-                        "primary-fixed": "#ffdad4",
-                        "inverse-primary": "#ffb4a8",
-                        "on-tertiary": "#ffffff",
-                        "on-error": "#ffffff",
-                        "on-tertiary-fixed-variant": "#464747",
-                        "on-surface-variant": "#5f3f3a",
-                        "error-container": "#ffdad6",
-                        "on-error-container": "#93000a",
-                        "on-secondary-fixed-variant": "#474746",
-                        "on-secondary-container": "#636262",
-                        "on-primary": "#ffffff",
-                        "secondary-container": "#e2dfde",
-                        "tertiary-fixed-dim": "#c7c6c6",
-                        "secondary-fixed": "#e5e2e1",
-                        "primary-fixed-dim": "#ffb4a8",
-                        "on-primary-container": "#fff3f2",
-                        "surface-container-highest": "#e3e2e0",
-                        "on-primary-fixed": "#410000",
-                        "primary": "#b40002"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "unit": "4px",
-                        "container-max": "1120px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "64px"
-                    },
-                    "fontFamily": {
-                        "body-md": [
-                            "\"Source Serif 4\""
-                        ],
-                        "body-lg": [
-                            "\"Source Serif 4\""
-                        ],
-                        "display-lg-mobile": [
-                            "Playfair Display"
-                        ],
-                        "label-sm": [
-                            "Inter"
-                        ],
-                        "display-lg": [
-                            "Playfair Display"
-                        ],
-                        "label-md": [
-                            "Inter"
-                        ],
-                        "headline-sm": [
-                            "Playfair Display"
-                        ],
-                        "headline-md": [
-                            "Playfair Display"
-                        ]
-                    },
-                    "fontSize": {
-                        "body-md": [
-                            "16px",
-                            {
-                                "lineHeight": "28px",
-                                "fontWeight": "400"
-                            }
-                        ],
-                        "body-lg": [
-                            "18px",
-                            {
-                                "lineHeight": "32px",
-                                "fontWeight": "400"
-                            }
-                        ],
-                        "display-lg-mobile": [
-                            "32px",
-                            {
-                                "lineHeight": "40px",
-                                "letterSpacing": "-0.01em",
-                                "fontWeight": "700"
-                            }
-                        ],
-                        "label-sm": [
-                            "12px",
-                            {
-                                "lineHeight": "16px",
-                                "letterSpacing": "0.03em",
-                                "fontWeight": "600"
-                            }
-                        ],
-                        "display-lg": [
-                            "48px",
-                            {
-                                "lineHeight": "56px",
-                                "letterSpacing": "-0.02em",
-                                "fontWeight": "700"
-                            }
-                        ],
-                        "label-md": [
-                            "14px",
-                            {
-                                "lineHeight": "20px",
-                                "letterSpacing": "0.05em",
-                                "fontWeight": "500"
-                            }
-                        ],
-                        "headline-sm": [
-                            "24px",
-                            {
-                                "lineHeight": "32px",
-                                "fontWeight": "600"
-                            }
-                        ],
-                        "headline-md": [
-                            "32px",
-                            {
-                                "lineHeight": "40px",
-                                "fontWeight": "600"
-                            }
-                        ]
-                    }
-                },
-            },
-        }
-    </script>
 
     <title>Contact Us | AM World School</title>
 
@@ -414,7 +34,7 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
 
         <div class="flex justify-between items-center px-6 py-3">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="amws logo.jpg" alt="AM World School Logo" class="h-12 w-auto object-contain"
+                <img src="../amws logo.jpg" alt="AM World School Logo" class="h-12 w-auto object-contain"
                     onerror="this.style.display='none'" />
                 <span class="font-headline-sm text-headline-sm text-primary font-bold hidden sm:inline">
                     AM World School
@@ -440,7 +60,7 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
             </div>
             <div class="flex items-center gap-6">
                 <a href="contact_us.html"
-                    class="relative text-primary font-bold text-[16px] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-primary after:rounded-full">
+                    class="relative text-primary font-bold text-[18px] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-primary after:rounded-full">
                     Contact Us
                 </a>
                 <!-- Login Dropdown -->
@@ -472,13 +92,94 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
                     </div>
 
                 </div>
-                <span class="material-symbols-outlined menu-mobile md:hidden">
-                    menu
-                </span>
+                <div class="flex items-center gap-3 md:hidden">
+                    <button id="menuBtn">
+                        <span class="material-symbols-outlined text-[34px]">
+                            menu
+                        </span>
+                    </button>
+                </div>
 
             </div>
         </div>
     </nav>
+    <!-- Mobile Menu -->
+
+    <div id="mobileMenu" class="fixed inset-0
+    bg-white/80
+    backdrop-blur-2xl
+    z-[999]
+    overflow-y-auto
+    overscroll-contain
+    translate-y-[-100%]
+    opacity-0
+    transition-all
+    duration-500
+    ease-in-out">
+
+        <button id="closeMenu" class="fixed top-6 right-6 z-[1001]
+    w-12 h-12
+    flex items-center justify-center
+    rounded-full
+    bg-white/70
+    backdrop-blur-xl
+    shadow-lg
+    hover:bg-white
+    transition">
+
+            <span class="material-symbols-outlined text-3xl">
+                close
+            </span>
+
+        </button>
+
+        <div class="pt-8 px-6">
+
+            <span class="font-bold text-2xl text-primary">
+                AM World School
+            </span>
+
+        </div>
+
+        <div class="flex flex-col pt-8 pb-10">
+
+            <a href="index.html" class="mobile-link">Home</a>
+
+            <a href="about_us.html" class="mobile-link">About Us</a>
+
+            <a href="admission.html" class="mobile-link">Admissions</a>
+
+            <a href="academic.html" class="mobile-link">Academic</a>
+
+            <a href="downloads.html" class="mobile-link">Downloads</a>
+
+            <a href="facilities.html" class="mobile-link">Facilities</a>
+
+            <a href="contact_us.html" class="mobile-link active">Contact Us</a>
+
+            <hr class="my-6">
+
+            <button id="loginToggle" class="mobile-link w-full">
+                <span>Login</span>
+
+                <span id="loginArrow" class="material-symbols-outlined transition-transform duration-300">
+                    expand_more
+                </span>
+            </button>
+
+            <div id="loginMenu" class="hidden flex-col bg-gray-50">
+
+                <a href="https://play.google.com/store/apps/details?id=simption.amworldschoolchandausi"
+                    class="mobile-link pl-12 text-[16px]">
+                    🎓 Students & Parents Login
+                </a>
+
+                <a href="https://simptionsmartsoftware.com/amworldschool/" class="mobile-link pl-12 text-[16px]">
+                    💻 ERP Login
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section
     <section class="max-w-container-max mx-auto px-margin-x mb-section-gap">
@@ -487,13 +188,8 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
             <p class="font-body-lg text-body-lg text-on-surface-variant">We are here to support your global operations
                 with dedicated expertise and seamless integration. Reach out to our regional specialists for tailored
                 solutions.</p> -->
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    </div>
-    </section>
+    <div class="h-28"></div>
+
     <!-- Main Content (Two Columns) -->
     <section class="max-w-container-max mx-auto px-margin-x mb-section-gap">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
@@ -501,14 +197,13 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
             <div
                 class="md:col-span-7 bg-white border border-[#E5E7EB] p-8 rounded-lg shadow-[0_10px_15px_-3px_rgba(4,22,39,0.02)]">
                 <form class="space-y-6" id="contact-form">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-10">
                         <div class="space-y-2">
                             <label class="block font-label-md text-label-md text-primary" for="name">NAME</label>
                             <input
                                 class="w-full bg-surface-container-low border border-outline-variant p-3 rounded focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all outline-none"
                                 id="name" name="name" placeholder="ABC" required="" type="text" />
                         </div>
-                      
                         <div class="space-y-2">
                             <label class="block font-label-md text-label-md text-primary" for="email">EMAIL
                                 ADDRESS</label>
@@ -536,7 +231,7 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
                             rows="6"></textarea>
                     </div>
                     <button
-                        class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded font-label-md text-label-md hover:bg-[#061e35] transition-all flex items-center justify-center gap-2"
+                        class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded font-label-md text-[18px] hover:bg-[#061e35] transition-all flex items-center justify-center gap-2"
                         type="submit">
                         Send Inquiry
                         <span class="material-symbols-outlined text-[20px]">send</span>
@@ -615,7 +310,7 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
             loading="lazy">
         </iframe>
     </section>
-    </main>
+
 
 
 
@@ -684,31 +379,11 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
         <div
             class="border-t border-on-primary/20 py-4 text-center font-body-md text-body-md opacity-60 max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between gap-1">
             <span>© 2026 AM World School. All rights reserved.</span>
-            <span>Made with ❤️ by Alekh Singh (Student of AM World School)</span>
+            <span>Made with ❤️ by Alekh Singh (Alumnus of AM World School)</span>
         </div>
-        <script>
-            // Micro-interaction for form submission
-            document.getElementById('contact-form').addEventListener('submit', function (e) {
-                e.preventDefault();
-                const btn = this.querySelector('button');
-                const originalText = btn.innerHTML;
 
-                btn.disabled = true;
-                btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Sending...';
-
-                setTimeout(() => {
-                    btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Inquiry Received';
-                    btn.classList.replace('bg-primary', 'bg-green-700');
-
-                    setTimeout(() => {
-                        btn.disabled = false;
-                        btn.innerHTML = originalText;
-                        btn.classList.replace('bg-green-700', 'bg-primary');
-                        this.reset();
-                    }, 3000);
-                }, 1500);
-            });
-        </script>
+        <script src="javacontact_us.js"></script>
+        <script src="javamobilemenu.js"></script>
 </body>
 
 </html>

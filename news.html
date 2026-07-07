@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+
+    <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Playfair+Display:wght@600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap"
+        rel="stylesheet">
+
+    <link href="favicon-96x96.png" rel="icon" type="image/png">
+    <title>News & Events | AM World School</title>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#e9bcb5",
+                        "background": "#faf9f7",
+                        "tertiary-fixed": "#e3e2e2",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "primary-container": "#e30003",
+                        "inverse-surface": "#2f3130",
+                        "surface": "#faf9f7",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-tint": "#c00002",
+                        "inverse-on-surface": "#f1f1ef",
+                        "surface-container": "#efeeec",
+                        "on-background": "#1a1c1b",
+                        "tertiary-container": "#707070",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#930001",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-low": "#f4f3f1",
+                        "surface-container-high": "#e9e8e6",
+                        "surface-variant": "#e3e2e0",
+                        "on-tertiary-container": "#f6f5f4",
+                        "tertiary": "#575858",
+                        "secondary": "#5f5e5e",
+                        "little": "#f5d0d0",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dadad8",
+                        "surface-bright": "#faf9f7",
+                        "on-surface": "#1a1c1b",
+                        "outline": "#946e68",
+                        "primary-fixed": "#ffdad4",
+                        "inverse-primary": "#ffb4a8",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "on-surface-variant": "#5f3f3a",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-secondary-container": "#636262",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#e2dfde",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "on-primary-container": "#fff3f2",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-primary-fixed": "#410000",
+                        "primary": "#b40002"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "container-max": "1120px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": [
+                            "\"Source Serif 4\""
+                        ],
+                        "body-lg": [
+                            "\"Source Serif 4\""
+                        ],
+                        "display-lg-mobile": [
+                            "Playfair Display"
+                        ],
+                        "label-sm": [
+                            "Inter"
+                        ],
+                        "display-lg": [
+                            "Playfair Display"
+                        ],
+                        "label-md": [
+                            "Inter"
+                        ],
+                        "headline-sm": [
+                            "Playfair Display"
+                        ],
+                        "headline-md": [
+                            "Playfair Display"
+                        ]
+                    },
+                    "fontSize": {
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "32px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "display-lg-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "label-sm": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.03em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "display-lg": [
+                            "48px",
+                            {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "label-md": [
+                            "14px",
+                            {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "headline-sm": [
+                            "24px",
+                            {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "headline-md": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Glass Navbar */
+        /* Dynamic Island Navbar */
+
+        .glass-nav {
+            background: rgba(255, 255, 255, .18);
+            backdrop-filter: blur(28px) saturate(180%);
+            -webkit-backdrop-filter: blur(28px) saturate(180%);
+
+            border: 1px solid rgba(255, 255, 255, .22);
+
+            border-radius: 999px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, .14),
+                inset 0 1px 1px rgba(255, 255, 255, .35);
+
+            transition: all .35s ease;
+
+            overflow: visible;
+        }
+
+        .glass-nav:hover {
+            transform: translateX(-50%) translateY(-2px);
+            background: rgba(255, 255, 255, .22);
+            box-shadow:
+                0 18px 45px rgba(0, 0, 0, .18),
+                inset 0 1px 1px rgba(255, 255, 255, .4);
+        }
+
+        /* Desktop */
+        #scroll-container {
+            height: 400vh;
+        }
+
+        @media (max-width:768px) {
+
+            #scroll-container {
+                height: 220vh;
+            }
+
+        }
+
+        /* ===========================
+   MOBILE RESPONSIVE
+   Desktop remains unchanged
+=========================== */
+
+        @media screen and (max-width:768px) {
+
+            /* html,
+                        body {
+                                overflow-x: hidden;
+                        } */
+            /* Mobile Scroll Animation */
+            #scroll-container {
+                height: 180vh !important;
+            }
+
+            #sticky-wrapper {
+                height: 100vh !important;
+            }
+
+            #scroll-canvas {
+                object-fit: contain !important;
+            }
+
+            /* Text positioning */
+            #slide-1,
+            #slide-4 {
+                width: 95%;
+                max-width: 95%;
+                padding: 0 16px;
+            }
+
+            /* Optional: keep text lower on mobile */
+            /* #slide-1,
+                        #slide-4 {
+                                top: 55%;
+                                transform: translateY(-50%);
+                        } */
+
+            /* Navbar */
+
+            nav .max-w-container-max {
+                padding: 12px 16px;
+            }
+
+            nav img {
+                height: 42px !important;
+            }
+
+            nav span.font-headline-sm {
+                font-size: 18px;
+            }
+
+            /* Hide desktop menu */
+
+            nav .md\:flex {
+                display: none !important;
+            }
+
+            /* Show menu icon */
+
+            .material-symbols-outlined.menu-mobile {
+                display: block !important;
+                font-size: 34px;
+                cursor: pointer;
+            }
+
+            /* Hero */
+
+            #scroll-container {
+                height: 260vh !important;
+            }
+
+            #slide-1,
+            #slide-4 {
+                width: 90%;
+                max-width: 100%;
+                padding: 0 20px;
+            }
+
+            #slide-1 h1 {
+                font-size: 34px !important;
+                line-height: 42px !important;
+            }
+
+            #slide-4 h2 {
+                font-size: 30px !important;
+                line-height: 38px !important;
+            }
+
+            #slide-1 p,
+            #slide-4 p {
+                font-size: 18px !important;
+                line-height: 30px !important;
+            }
+
+            /* Buttons */
+
+            button {
+                width: 100%;
+            }
+
+            #slide-4 .flex {
+                width: 100%;
+            }
+
+            /* About */
+
+            section.grid {
+                gap: 20px;
+            }
+
+            /* Director Principal */
+
+            .group .relative.h-\[400px\] {
+                height: 280px !important;
+            }
+
+            /* Cards */
+
+            .grid.md\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+            }
+
+            .grid.md\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* CTA */
+
+            section.bg-primary {
+                text-align: center;
+            }
+
+            section.bg-primary button {
+                width: 100%;
+            }
+
+            /* Footer */
+
+            footer {
+                text-align: center;
+            }
+
+            footer>div {
+                width: 100%;
+                max-width: 100%;
+                align-items: center;
+            }
+
+            footer .md\:items-end {
+                align-items: center !important;
+            }
+
+        }
+
+        @media (max-width:768px) {
+
+            .glass-nav {
+
+                width: 90%;
+                top: 12px;
+
+                border-radius: 999px;
+
+            }
+
+            .glass-nav>div {
+                padding: 12px 18px;
+            }
+        }
+
+        /* Mobile menu */
+        .mobile-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 28px;
+            font-size: 17px;
+            font-weight: 600;
+            transition: all .3s ease;
+        }
+
+        .mobile-link:hover {
+
+            background: #f8f8f8;
+
+            padding-left: 45px;
+
+            color: #b40002;
+
+        }
+
+        .mobile-link.active {
+
+            color: #b40002;
+
+            font-weight: 700;
+
+        }
+
+        /* New */
+        #mobileMenu {
+            height: 100vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        #mobileMenu::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Edge, Safari */
+        }
+    </style>
+
+</head>
+
+<body class="bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen">
+    <!-- TopNavBar -->
+    <nav class="glass-nav fixed top-5 left-1/2 -translate-x-1/2 z-50
+w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
+
+        <div class="flex justify-between items-center px-6 py-3">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="../amws logo.jpg" alt="AM World School Logo" class="h-12 w-auto object-contain"
+                    onerror="this.style.display='none'" />
+                <span class="font-headline-sm text-headline-sm text-primary font-bold hidden sm:inline">
+                    AM World School
+                </span>
+            </a>
+
+            <!--<div class="font-headline-sm text-headline-sm text-primary font-bold">
+                                AM World School
+                        </div>-->
+            <div class="hidden md:flex items-center gap-gutter font-label-md text-label-md">
+                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
+                    href="about_us.html">About Us</a>
+                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
+                    href="admission.html">Admissions</a>
+                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
+                    href="academic.html">Academic</a>
+                <a class="text-primary font-bold text-[16px] border-b-2 border-secondary pb-1 transition-colors duration-200"
+                    href="downloads.html">Downloads</a>
+                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
+                    href="facilities.html">Facilities</a>
+            </div>
+            <div class="flex items-center gap-unit">
+                <button
+                    class="hidden md:inline-flex items-center justify-center px-4 py-2 bg-little text-primary font-bold font-label-md text-label-md rounded-lg hover:bg-secondary-fixed-dim transition-colors"><a
+                        href="contact_us.html">Contact
+                        Us</a></button>
+                <!-- Login Dropdown -->
+                <div class="relative group hidden md:block">
+
+                    <button
+                        class="inline-flex items-center justify-center gap-1 px-4 py-1.5 bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary-container transition-all duration-300">
+                        Login
+                        <span
+                            class="material-symbols-outlined text-lg transition-transform duration-300 group-hover:rotate-180">
+                            expand_more
+                        </span>
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div
+                        class="absolute right-0 mt-2 w-62 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible translate-y-3 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out overflow-hidden z-50">
+
+                        <a href="https://play.google.com/store/apps/details?id=simption.amworldschoolchandausi"
+                            class="block px-6 py-3 whitespace-nowrap hover:bg-red-50 hover:text-red-700 transition-all duration-200">
+                            🎓 Student & Parents Login
+                        </a>
+
+                        <a href="https://simptionsmartsoftware.com/amworldschool/"
+                            class="block px-6 py-3 whitespace-nowrap hover:bg-red-50 hover:text-red-700 transition-all duration-200 border-t">
+                            💻 ERP Login
+                        </a>
+
+                    </div>
+
+                </div>
+                <div class="flex items-center gap-3 md:hidden">
+                    <a href="news.html" class="relative text-primary font-bold text-[18px]
+           after:absolute after:left-0 after:-bottom-1
+           after:h-[2px] after:w-full
+           after:bg-primary after:rounded-full">
+                        News & Events
+                    </a>
+
+                    <button id="menuBtn">
+                        <span class="material-symbols-outlined text-[34px]">
+                            menu
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Menu -->
+
+    <div id="mobileMenu" class="fixed inset-0
+    bg-white/80
+    backdrop-blur-2xl
+    z-[999]
+    overflow-y-auto
+    overscroll-contain
+    translate-y-[-100%]
+    opacity-0
+    transition-all
+    duration-500
+    ease-in-out">
+
+        <button id="closeMenu" class="fixed top-6 right-6 z-[1001]
+    w-12 h-12
+    flex items-center justify-center
+    rounded-full
+    bg-white/70
+    backdrop-blur-xl
+    shadow-lg
+    hover:bg-white
+    transition">
+
+            <span class="material-symbols-outlined text-3xl">
+                close
+            </span>
+
+        </button>
+
+        <div class="pt-8 px-6">
+
+            <span class="font-bold text-2xl text-primary">
+                AM World School
+            </span>
+
+        </div>
+
+        <div class="flex flex-col pt-8 pb-10">
+
+            <a href="index.html" class="mobile-link">Home</a>
+
+            <a href="about_us.html" class="mobile-link">About Us</a>
+
+            <a href="admission.html" class="mobile-link">Admissions</a>
+
+            <a href="academic.html" class="mobile-link">Academic</a>
+
+            <a href="downloads.html" class="mobile-link">Downloads</a>
+
+            <a href="facilities.html" class="mobile-link">Facilities</a>
+
+            <a href="contact_us.html" class="mobile-link">Contact Us</a>
+
+            <hr class="my-6">
+
+            <button id="loginToggle" class="mobile-link w-full">
+                <span>Login</span>
+
+                <span id="loginArrow" class="material-symbols-outlined transition-transform duration-300">
+                    expand_more
+                </span>
+            </button>
+
+            <div id="loginMenu" class="hidden flex-col bg-gray-50">
+
+                <a href="https://play.google.com/store/apps/details?id=simption.amworldschoolchandausi"
+                    class="mobile-link pl-12 text-[16px]">
+                    🎓 Students & Parents Login
+                </a>
+
+                <a href="https://simptionsmartsoftware.com/amworldschool/" class="mobile-link pl-12 text-[16px]">
+                    💻 ERP Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+
+    <!-- Footer -->
+    <footer class="bg-primary w-full text-on-primary">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-gutter py-margin-desktop">
+            <div>
+                <div class="font-headline-sm text-headline-sm font-bold text-secondary-container mb-4">
+                    AM World School
+                </div>
+                <p class="font-body-md text-body-md opacity-80">
+                    Little Hands will win the World.
+                    <br />
+                    A premier institution dedicated to
+                    academic excellence.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md uppercase text-secondary-container mb-4">Contact
+                    Info</h4>
+                <div class="flex flex-col gap-unit font-body-md text-body-md opacity-80">
+                    <p class="flex justify-center gap-3 w-fit mx-auto md:mx-0 md:w-full md:justify-start">
+                        <span class="material-symbols-outlined text-[20px] flex-shrink-0">location_on</span>
+                        <span>AM WORLD SCHOOL, Bahjoi Road, Maulagarh, Chandausi, Sambhal<br />Pin
+                            code: 244412</span>
+                    </p>
+                    <br>
+                    <p class="flex items-center justify-center gap-3 w-fit mx-auto md:mx-0 md:w-full md:justify-start">
+                        <span class="material-symbols-outlined text-[20px] flex-shrink-0">
+                            phone
+                        </span>
+                        <span class="text-center md:text-left">
+                            +91 9012688800<br>
+                            +91 8002148800
+                        </span>
+                    </p>
+
+                    <p
+                        class="flex items-center justify-center gap-3 w-fit mx-auto md:mx-0 md:w-full md:justify-start mt-4">
+                        <span class="material-symbols-outlined text-[20px] flex-shrink-0">
+                            mail
+                        </span>
+                        <span class="text-center md:text-left">
+                            amworldschools@gmail.com
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md uppercase text-secondary-container mb-4">Quick
+                    Links</h4>
+                <ul class="space-y-2 font-body-md text-body-md opacity-80">
+                    <li><a class="hover:text-secondary-fixed hover:underline transition-all duration-200"
+                            href="index.html">Quick
+                            Links</a></li>
+                    <li><a class="hover:text-secondary-fixed hover:underline transition-all duration-200"
+                            href="news.html">News
+                            &amp; Events</a></li>
+                    <li><a class="hover:text-secondary-fixed hover:underline transition-all duration-200"
+                            href="gallery.html">Gallery</a></li>
+                    <li><a class="hover:text-secondary-fixed hover:underline transition-all duration-200"
+                            href="../template.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md uppercase text-secondary-container mb-4">
+                    Newsletter</h4>
+                <p class="font-body-md text-body-md opacity-80 mb-4">Stay updated with our latest
+                    academic events and news.</p>
+                <div class="flex">
+                    <input
+                        class="bg-primary-container border border-outline rounded-l-lg px-3 py-2 text-sm w-full focus:ring-1 focus:ring-secondary-container outline-none text-on-primary placeholder:text-on-primary/50"
+                        placeholder="Your email" type="email" />
+                    <button
+                        class="bg-secondary-container text-on-secondary-container px-4 rounded-r-lg font-label-md text-label-md font-bold hover:brightness-110 transition-all">Join</button>
+                </div>
+            </div>
+        </div>
+        <div
+            class="border-t border-on-primary/20 py-4 text-center font-body-md text-body-md opacity-60 max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between gap-1">
+            <span>© 2026 AM World School. All rights reserved.</span>
+            <span>Made with ❤️ by Alekh Singh (Alumnus of AM World School)</span>
+        </div>
+
+
+        <script>
+            const menuBtn = document.getElementById("menuBtn");
+
+            const closeBtn = document.getElementById("closeMenu");
+
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            menuBtn.addEventListener("click", () => {
+
+                mobileMenu.classList.remove("translate-y-[-100%]", "opacity-0");
+
+                mobileMenu.classList.add("translate-y-0", "opacity-100");
+
+                document.body.style.overflow = "hidden";
+
+            });
+
+            closeBtn.addEventListener("click", () => {
+
+                mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
+
+                mobileMenu.classList.remove("translate-y-0", "opacity-100");
+
+                document.body.style.overflow = "";
+
+            });
+
+            document.querySelectorAll("#mobileMenu a.mobile-link").forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
+                    mobileMenu.classList.remove("translate-y-0", "opacity-100");
+                    document.body.style.overflow = "";
+
+                });
+
+            });
+
+
+            const loginToggle = document.getElementById("loginToggle");
+            const loginMenu = document.getElementById("loginMenu");
+            const loginArrow = document.getElementById("loginArrow");
+
+            loginToggle.addEventListener("click", () => {
+
+                loginMenu.classList.toggle("hidden");
+
+                loginMenu.classList.toggle("flex");
+
+                loginArrow.classList.toggle("rotate-180");
+
+            });
+        </script>
+</body>
+
+</html>

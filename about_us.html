@@ -1,71 +1,44 @@
 <!DOCTYPE html>
+
 <html class="scroll-smooth" lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>About Us | AM World School</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="design.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;display=swap"
+        rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet">
-    <link href="favicon-96x96.png" rel="icon" type="image/png" />
+        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "surface": "#f8f9ff",
-                        "surface-container-high": "#dce9ff",
-                        "on-error": "#ffffff",
-                        "primary-fixed": "#ffdad6",
-                        "on-surface": "#0d1c2e",
-                        "surface-container-highest": "#d5e3fc",
-                        "outline": "#76777d",
-                        "on-tertiary-container": "#818486",
-                        "surface-container-low": "#eff4ff",
-                        "tertiary-container": "#191c1e",
-                        "tertiary-fixed-dim": "#c4c7c9",
-                        "on-background": "#0d1c2e",
-                        "surface-container": "#e6eeff",
-                        "primary-container": "#410002",
-                        "primary-fixed-dim": "#ffb4ab",
-                        "on-primary-fixed-variant": "#93000a",
-                        "on-secondary-container": "#745c00",
-                        "on-tertiary": "#ffffff",
-                        "surface-bright": "#f8f9ff",
-                        "outline-variant": "#c6c6cd",
-                        "secondary-fixed-dim": "#e9c349",
-                        "on-tertiary-fixed-variant": "#444749",
-                        "tertiary-fixed": "#e0e3e5",
-                        "inverse-surface": "#233144",
-                        "secondary-container": "#fed65b",
-                        "secondary": "#735c00",
+                        "primary": "#b40002",
                         "on-primary": "#ffffff",
-                        "on-secondary-fixed": "#241a00",
-                        "on-surface-variant": "#45464d",
-                        "surface-variant": "#d5e3fc",
-                        "inverse-on-surface": "#eaf1ff",
-                        "on-tertiary-fixed": "#191c1e",
-                        "secondary-fixed": "#ffe088",
-                        "on-secondary": "#ffffff",
-                        "primary": "#DA0003",
-                        "on-secondary-fixed-variant": "#574500",
-                        "on-primary-fixed": "#410002",
-                        "error": "#ba1a1a",
-                        "error-container": "#ffdad6",
-                        "surface-tint": "#DA0003",
-                        "surface-container-lowest": "#ffffff",
-                        "tertiary": "#000000",
-                        "surface-dim": "#ccdbf3",
-                        "on-error-container": "#93000a",
-                        "inverse-primary": "#ffb4ab",
-                        "background": "#f8f9ff",
-                        "on-primary-container": "#ffdad6"
+                        "primary-container": "#e30003",
+                        "on-primary-container": "#fff3f2",
+                        "secondary": "#5f5e5e",
+                        "secondary-container": "#e2dfde",
+                        "on-secondary-container": "#636262",
+                        "background": "#faf9f7",
+                        "on-background": "#1a1c1b",
+                        "surface": "#faf9f7",
+                        "on-surface": "#1a1c1b",
+                        "surface-variant": "#e3e2e0",
+                        "on-surface-variant": "#5f3f3a",
+                        "outline": "#946e68",
+                        "outline-variant": "#e9bcb5",
+                        "little": "#f5d0d0",
+                        "surface-container-low": "#f4f3f1",
+                        "surface-container": "#efeeec",
+                        "surface-container-high": "#e9e8e6",
                     },
                     "borderRadius": {
                         "DEFAULT": "0.25rem",
@@ -74,35 +47,15 @@
                         "full": "9999px"
                     },
                     "spacing": {
-                        "lg": "48px",
-                        "xs": "8px",
-                        "margin-mobile": "16px",
-                        "xl": "80px",
-                        "md": "24px",
                         "gutter": "24px",
-                        "margin-desktop": "64px",
-                        "base": "4px",
-                        "sm": "16px"
+                        "unit": "4px",
+                        "container-max": "1120px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
                     },
                     "fontFamily": {
-                        "headline-lg": ["\"Source Serif 4\""],
-                        "label-md": ["\"Source Sans 3\""],
-                        "headline-lg-mobile": ["\"Source Serif 4\""],
-                        "body-md": ["\"Source Sans 3\""],
-                        "headline-md": ["\"Source Serif 4\""],
-                        "headline-xl": ["\"Source Serif 4\""],
-                        "body-lg": ["\"Source Sans 3\""],
-                        "caption": ["\"Source Sans 3\""]
-                    },
-                    "fontSize": {
-                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
-                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }]
+                        "headline": ["Playfair Display", "serif"],
+                        "body": ["\"Source Serif 4\"", "serif"]
                     }
                 },
             },
@@ -115,353 +68,840 @@
             vertical-align: middle;
         }
 
-        .text-balance {
-            text-wrap: balance;
+        .glass-nav {
+            background: rgba(255, 255, 255, .18);
+            backdrop-filter: blur(28px) saturate(180%);
+            -webkit-backdrop-filter: blur(28px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, .22);
+            border-radius: 999px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, .14), inset 0 1px 1px rgba(255, 255, 255, .35);
+            transition: all .35s ease;
         }
+
+        .glass-nav:hover {
+            transform: translateX(-50%) translateY(-2px);
+            background: rgba(255, 255, 255, .22);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .18), inset 0 1px 1px rgba(255, 255, 255, .4);
+        }
+
+        .glass-dropdown {
+            background: rgba(255, 255, 255, 1);
+            backdrop-filter: blur(28px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, .25);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .18), inset 0 1px 1px rgba(255, 255, 255, .35);
+            overflow: hidden;
+            animation: dropdownBlur .35s ease;
+        }
+
+        @keyframes dropdownBlur {
+            from {
+                opacity: 0;
+                transform: translateY(12px) scale(.97);
+                filter: blur(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 22px;
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all .25s ease;
+            position: relative;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(255, 255, 255, .55);
+            color: #b40002;
+            padding-left: 28px;
+        }
+
+        .dropdown-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #b40002;
+            transform: scaleY(0);
+            transition: .25s ease;
+        }
+
+        .dropdown-item:hover::before {
+            transform: scaleY(1);
+        }
+
+        .mobile-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 28px;
+            font-size: 17px;
+            font-weight: 600;
+            transition: all .3s ease;
+
+        }
+
+        .mobile-link:active {
+            background: #f8f8f8;
+            padding-left: 45px;
+            color: #b40002;
+            font-weight: 1000;
+
+        }
+
+        #navbartop {
+            font-family: Inter;
+
+        }
+
     </style>
 </head>
 
-<body class="bg-background text-on-surface font-body-md">
+<body class="bg-background text-on-background font-body antialiased flex flex-col min-h-screen">
     <!-- TopNavBar -->
-    <header class="w-full top-0 sticky z-50 bg-surface border-b border-outline-variant">
-        <nav class="flex justify-between items-center max-w-7xl mx-auto px-md h-16">
-            <div class="flex items-center gap-sm">
-                <img src="amws logo.jpg" alt="AM World School Logo" class="h-12 w-auto">
-                <div class="font-headline-md text-headline-md font-bold text-primary">AM World School</div>
-            </div>
-            <!-- Desktop Links -->
-            <div class="hidden md:flex items-center gap-gutter"><a
-                    class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md"
+    <nav id="navbartop" class="glass-nav fixed top-5 left-1/2 -translate-x-1/2 z-50
+w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
+
+        <div class="flex justify-between items-center px-6 py-3">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="../amws logo.jpg" alt="AM World School Logo" class="h-12 w-auto object-contain"
+                    onerror="this.style.display='none'" />
+                <span class="font-headline-sm text-headline-sm text-primary font-bold hidden sm:inline" style="font-family: 'Playfair Display', serif; font-size: 24px;">
+                    AM World School
+                </span>
+            </a>
+
+            <!--<div class="font-headline-sm text-headline-sm text-primary font-bold">
+                                AM World School
+                        </div>-->
+            <div class="hidden md:flex items-center gap-gutter font-label-md text-label-md">
+                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
                     href="index.html">Home</a>
-                <a class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md"
+                <a class="text-primary font-bold text-[16px] border-b-2 border-secondary pb-1 transition-colors duration-200"
                     href="about_us.html">About Us</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md"
+                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
                     href="admission.html">Admissions</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md"
+                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
                     href="academic.html">Academic</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md"
+                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
                     href="downloads.html">Downloads</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md"
+                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
                     href="facilities.html">Facilities</a>
             </div>
-            <div class="flex items-center gap-sm">
+            <div class="flex items-center gap-unit">
                 <button
-                    class="bg-secondary text-on-secondary px-md py-xs rounded-lg font-label-md text-label-md hover:brightness-110 transition-all">
-                    Contact Us
-                </button>
-                <button
-                    class="bg-primary text-on-primary px-md py-xs rounded-lg font-label-md text-label-md hover:brightness-110 transition-all">
-                    Login
-                </button>
+                    class="hidden md:inline-flex items-center justify-center px-4 py-2 bg-little text-primary font-bold font-label-md text-label-md rounded-lg hover:bg-secondary-fixed-dim transition-colors"><a
+                        href="contact_us.html">Contact
+                        Us</a></button>
+                <!-- Login Dropdown -->
+                <div class="relative group hidden md:block">
+
+                    <button
+                        class="inline-flex items-center justify-center gap-1 px-4 py-1.5 bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary-container transition-all duration-300">
+                        Login
+                        <span
+                            class="material-symbols-outlined text-lg transition-transform duration-300 group-hover:rotate-180">
+                            expand_more
+                        </span>
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div
+                        class="absolute right-0 mt-2 w-62 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible translate-y-3 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out overflow-hidden z-50">
+
+                        <a href="https://play.google.com/store/apps/details?id=simption.amworldschoolchandausi"
+                            class="block px-6 py-3 whitespace-nowrap hover:bg-red-50 hover:text-red-700 transition-all duration-200">
+                            🎓 Student & Parents Login
+                        </a>
+
+                        <a href="https://simptionsmartsoftware.com/amworldschool/"
+                            class="block px-6 py-3 whitespace-nowrap hover:bg-red-50 hover:text-red-700 transition-all duration-200 border-t">
+                            💻 ERP Login
+                        </a>
+
+                    </div>
+
+                </div>
+                <div class="flex items-center gap-3 md:hidden">
+                    <a href="about_us.html" class="relative text-primary font-bold text-[18px]
+                    whitespace-nowrap
+           after:absolute after:left-0 after:-bottom-1
+           after:h-[2px] after:w-full
+           after:bg-primary after:rounded-full">
+                        About Us
+                    </a>
+
+                    <button id="menuBtn">
+                        <span class="material-symbols-outlined text-[34px]">
+                            menu
+                        </span>
+                    </button>
+                </div>
             </div>
-        </nav>
-    </header>
-    <main>
+        </div>
+    </nav>
+    <!-- Mobile Menu -->
+
+    <div id="mobileMenu" class="fixed inset-0
+    bg-white/80
+    backdrop-blur-2xl
+    z-[999]
+    overflow-y-auto
+    overscroll-contain
+    translate-y-[-100%]
+    opacity-0
+    transition-all
+    duration-500
+    ease-in-out">
+
+        <button id="closeMenu" class="fixed top-6 right-6 z-[1001]
+    w-12 h-12
+    flex items-center justify-center
+    rounded-full
+    bg-white/70
+    backdrop-blur-xl
+    shadow-lg
+    hover:bg-white
+    transition">
+
+            <span class="material-symbols-outlined text-3xl">
+                close
+            </span>
+
+        </button>
+
+        <div class="pt-8 px-6">
+
+            <span class="font-bold text-2xl text-primary">
+                AM World School
+            </span>
+
+        </div>
+
+        <div class="flex flex-col pt-8 pb-10">
+
+            <a href="index.html" class="mobile-link">Home</a>
+
+            <a href="about_us.html" class="mobile-link active">About Us</a>
+
+            <a href="admission.html" class="mobile-link">Admissions</a>
+
+            <a href="academic.html" class="mobile-link">Academic</a>
+
+            <a href="downloads.html" class="mobile-link">Downloads</a>
+
+            <a href="facilities.html" class="mobile-link">Facilities</a>
+
+            <a href="contact_us.html" class="mobile-link">Contact Us</a>
+
+            <hr class="my-6">
+
+            <button id="loginToggle" class="mobile-link w-full">
+                <span>Login</span>
+
+                <span id="loginArrow" class="material-symbols-outlined transition-transform duration-300">
+                    expand_more
+                </span>
+            </button>
+
+            <div id="loginMenu" class="hidden flex-col bg-gray-50">
+
+                <a href="https://play.google.com/store/apps/details?id=simption.amworldschoolchandausi"
+                    class="mobile-link pl-12 text-[16px]">
+                    🎓 Students & Parents Login
+                </a>
+
+                <a href="https://simptionsmartsoftware.com/amworldschool/" class="mobile-link pl-12 text-[16px]">
+                    💻 ERP Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <main class="flex-grow">
         <!-- Hero Section -->
-        <section
-            class="relative h-[614px] min-h-[500px] flex items-center justify-center overflow-hidden transition-all duration-700 opacity-100">
-            <div class="absolute inset-0 z-0" data-alt="A grand aerial view of a prestigious K-12 campus"
-                style="background-image: url('amws.jpg'); background-size: cover; background-position: center;">
+        <section class="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0"
+                style="background-image: url('../amws.jpg'); background-size: cover; background-position: center;">
             </div>
-            <div class="absolute inset-0 bg-primary-container/40 z-10"></div>
-            <div class="relative z-20 text-center px-md max-w-4xl">
-                <h1 class="font-headline-xl text-headline-xl text-white mb-sm drop-shadow-lg">Legacy of Excellence,
-                    Future of Innovation</h1>
-                <p class="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto drop-shadow-md">Since 1988, AM World
-                    School has been a pioneer in holistic education, nurturing global citizens who lead with integrity
-                    and purpose.</p>
-                <div class="h-1.5 w-24 bg-primary mx-auto mt-lg rounded-full"></div>
+            <div class="absolute inset-0 bg-primary/30 backdrop-brightness-75 z-10"></div>
+            <div class="relative z-20 text-center px-6 max-w-4xl mt-20">
+                <h1 class="font-headline text-5xl md:text-6xl text-white mb-6 drop-shadow-lg leading-tight">Legacy of
+                    Excellence,<br />Future of Innovation</h1>
+                <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md leading-relaxed">AM World
+                    School has been a pioneer in holistic education, nurturing global citizens who lead with
+                    integrity and purpose.</p>
+                <div class="h-1.5 w-24 bg-primary mx-auto mt-10 rounded-full"></div>
             </div>
         </section>
         <!-- Vision & Mission -->
-        <section class="py-xl max-w-7xl mx-auto px-md transition-all duration-700 opacity-100">
-            <div class="grid md:grid-cols-2 gap-xl">
+        <section class="py-20 max-w-container-max mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
                 <div
-                    class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center gap-sm mb-md">
-                        <span class="material-symbols-outlined text-primary text-4xl">visibility</span>
-                        <h2 class="font-headline-lg text-headline-lg">Our Vision</h2>
+                    class="bg-white p-10 rounded-2xl border border-outline-variant shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-symbols-outlined text-primary text-5xl">visibility</span>
+                        <h2 class="font-headline text-3xl">Our Vision</h2>
                     </div>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant">To be a globally recognized institution
+                    <p class="text-lg text-on-surface-variant leading-relaxed">To be a globally recognized institution
                         that inspires every student to excel academically, socially, and ethically, preparing them for
                         the challenges of an ever-evolving world.</p>
                 </div>
                 <div
-                    class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center gap-sm mb-md">
-                        <span class="material-symbols-outlined text-primary text-4xl">flag</span>
-                        <h2 class="font-headline-lg text-headline-lg">Our Mission</h2>
+                    class="bg-white p-10 rounded-2xl border border-outline-variant shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-symbols-outlined text-primary text-5xl">flag</span>
+                        <h2 class="font-headline text-3xl">Our Mission</h2>
                     </div>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant">To provide a nurturing environment that
+                    <p class="text-lg text-on-surface-variant leading-relaxed">To provide a nurturing environment that
                         fosters intellectual curiosity, creative thinking, and a commitment to service, ensuring our
                         students reach their full potential.</p>
                 </div>
             </div>
         </section>
-        <!-- Message from the Principal -->
-        <section class="bg-surface-container-low py-xl transition-all duration-700 opacity-100">
-            <div class="max-w-7xl mx-auto px-md">
-                <div class="grid md:grid-cols-12 gap-xl items-center">
-                    <div class="md:col-span-5 relative">
-                        <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-lg border-4 border-white bg-cover bg-center"
-                            data-alt="Professional portrait of Dr. Elizabeth Montgomery"
-                            style="background-image: url('principal.webp')">
-                        </div>
-                        <div
-                            class="absolute -bottom-6 -right-6 bg-secondary-container text-on-secondary-container p-md rounded-xl shadow-md hidden md:block">
-                            <p class="font-headline-md italic">"Every child is a story waiting to be told."</p>
+        <!-- Director's Message -->
+        <section class="bg-white py-24">
+            <div class="max-w-container-max mx-auto px-6">
+                <div class="grid lg:grid-cols-12 gap-16 items-center">
+
+                    <!-- Text (Left) -->
+                    <div id="director_message" class="lg:col-span-7 lg:order-1 order-2">
+                        <span class="font-bold text-sm text-primary uppercase tracking-[0.2em] block mb-4">
+                            Leadership Message
+                        </span>
+
+                        <h2 class="font-headline text-4xl md:text-5xl mb-8 leading-tight">
+                            From the Director's Desk
+                        </h2>
+
+                        <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+
+                            <p>
+                                At AM World School, education is not merely the acquisition of
+                                knowledge—it is the foundation upon which character, confidence,
+                                and compassion are built. Every child possesses unique potential,
+                                and our mission is to nurture that potential through meaningful
+                                learning experiences.
+                            </p>
+
+                            <p>
+                                We strive to create an environment where innovation meets
+                                tradition, where curiosity is encouraged, and where students are
+                                empowered to become responsible global citizens. Together with our
+                                dedicated faculty and supportive parents, we continue our journey
+                                towards excellence.
+                            </p>
+
+                            <div class="pt-6 border-t border-outline-variant/30">
+                                <p class="font-bold text-xl text-on-surface">
+                                    — Mr. Anup Mangalam
+                                </p>
+                                <p class="text-primary font-semibold">
+                                    Director, AM World School
+                                </p>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="md:col-span-7">
-                        <span
-                            class="font-label-md text-label-md text-primary uppercase tracking-widest block mb-xs">Leadership
+
+                    <!-- Image (Right) -->
+                    <div class="lg:col-span-5 lg:order-2 order-1 relative">
+
+                        <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-cover bg-center"
+                            style="background-image: url('../director.webp');">
+                        </div>
+
+                        <div
+                            class="absolute -bottom-8 -left-8 bg-secondary-container text-on-secondary-container p-8 rounded-2xl shadow-xl hidden md:block max-w-xs border border-white/50 backdrop-blur-sm">
+
+                            <p class="font-headline text-xl italic leading-snug">
+                                "Education is the bridge between dreams and success."
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Message from the Principal -->
+        <section class="bg-surface-container-low py-24">
+            <div id="principal_message" class="max-w-container-max mx-auto px-6">
+                <div class="grid lg:grid-cols-12 gap-16 items-center">
+                    <div class="lg:col-span-5 relative">
+                        <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-cover bg-center"
+                            style="background-image: url('../principal.webp')">
+                        </div>
+                        <div
+                            class="absolute -bottom-8 -right-8 bg-secondary-container text-on-secondary-container p-8 rounded-2xl shadow-xl hidden md:block max-w-xs border border-white/50 backdrop-blur-sm">
+                            <p class="font-headline text-xl italic leading-snug">"Every child is a story waiting to be
+                                told."</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <span class="font-bold text-sm text-primary uppercase tracking-[0.2em] block mb-4">Leadership
                             Message</span>
-                        <h2 class="font-headline-xl text-headline-xl mb-md">From the Principal's Desk</h2>
-                        <div class="space-y-md font-body-lg text-body-lg text-on-surface-variant">
-                            <p class="">Welcome to AM World School. As we navigate the complex landscape of 21st-century
-                                education, our focus remains steadfast on the individual growth of each student. We
-                                believe that true learning goes beyond textbooks; it lies in the ability to think
-                                critically, collaborate effectively, and act with compassion.</p>
-                            <p class="">Our dedicated faculty works tirelessly to create an atmosphere where students
-                                feel safe to take risks and explore their passions. We invite you to join our community
-                                and witness firsthand how we turn curiosity into capability.</p>
-                            <div class="pt-sm">
-                                <p class="font-bold text-on-surface">— Mr. Kuldeep Singh</p>
-                                <p class="text-on-surface-variant text-body-md">Qualification</p>
+                        <h2 class="font-headline text-4xl md:text-5xl mb-8 leading-tight">From the Principal's Desk</h2>
+                        <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+                            <p>At AM World School, traditional values are blended with modern infrastructure and
+                                innovative teaching methods to create a nurturing learning environment. Students from
+                                diverse backgrounds learn, grow, and thrive together while developing confidence,
+                                responsibility, and strong moral values.</p>
+                            <p>Our excellent CBSE Class X and XII board results reflect our dedication to academic
+                                excellence. At AM World School, students are encouraged to view challenges as
+                                opportunities, learn from every setback, and develop the confidence, resilience, and
+                                determination needed to achieve success in life.
+                            </p>
+                            <div class="pt-6 border-t border-outline-variant/30">
+                                <p class="font-bold text-xl text-on-surface">— Mr. Kuldeep Singh</p>
+                                <p class="text-primary font-semibold">Principal, AM World School</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- History & Heritage -->
-        <section class="py-xl max-w-7xl mx-auto px-md transition-all duration-700 opacity-100">
-            <div class="text-center mb-xl">
-                <h2 class="font-headline-xl text-headline-xl">Our Journey</h2>
-                <p class="text-on-surface-variant max-w-2xl mx-auto">Three decades of academic distinction and cultural
-                    heritage.</p>
+
+
+
+        <!-- History & Heritage (Our Journey) -->
+        <section class="py-24 max-w-container-max mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="font-headline text-4xl md:text-5xl mb-4">Our Journey</h2>
+                <div class="h-1 w-20 bg-primary mx-auto mb-6 rounded-full"></div>
+                <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">A decade of academic distinction and
+                    cultural heritage.</p>
             </div>
             <div
-                class="relative space-y-lg before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-outline-variant">
+                class="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-outline-variant/50">
                 <!-- Timeline Item 1 -->
                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                     <div
-                        class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-primary text-white shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 transition-transform group-hover:scale-125">
                         <span class="material-symbols-outlined text-sm">history</span>
                     </div>
                     <div
-                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-md rounded-xl border border-outline-variant shadow-sm">
-                        <div class="flex items-center justify-between mb-xs">
-                            <span class="font-headline-md text-primary">1988</span>
-                        </div>
-                        <div class="text-on-surface-variant">Founded as a small primary school with 50 students,
-                            dedicated to personalized attention and character building.</div>
+                        class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-8 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-all">
+                        <span class="font-headline text-2xl text-primary block mb-2">2016</span>
+                        <p class="text-on-surface-variant leading-relaxed">AM World School officially opened its doors
+                            on 6 April 2016 with the vision of providing quality CBSE education in the Chandausi region.
+                        </p>
                     </div>
                 </div>
                 <!-- Timeline Item 2 -->
                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                     <div
-                        class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-primary text-white shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 transition-transform group-hover:scale-125">
                         <span class="material-symbols-outlined text-sm">school</span>
                     </div>
                     <div
-                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-md rounded-xl border border-outline-variant shadow-sm">
-                        <div class="flex items-center justify-between mb-xs">
-                            <span class="font-headline-md text-primary">2005</span>
-                        </div>
-                        <div class="text-on-surface-variant">Inaugurated the High School campus and introduced the
-                            International Baccalaureate (IB) curriculum to foster global perspectives.</div>
+                        class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-8 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-all">
+                        <span class="font-headline text-2xl text-primary block mb-2">2017</span>
+                        <p class="text-on-surface-variant leading-relaxed">The school received its initial CBSE
+                            affiliation and began strengthening its academic and co-curricular programmes.</p>
                     </div>
                 </div>
                 <!-- Timeline Item 3 -->
                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                     <div
-                        class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
-                        <span class="material-symbols-outlined text-sm">rocket_launch</span>
+                        class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-primary text-white shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 transition-transform group-hover:scale-125">
+                        <span class="material-symbols-outlined text-sm">computer</span>
                     </div>
                     <div
-                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-md rounded-xl border border-outline-variant shadow-sm">
-                        <div class="flex items-center justify-between mb-xs">
-                            <span class="font-headline-md text-primary">2020</span>
-                        </div>
-                        <div class="text-on-surface-variant">Launched the Science &amp; Innovation Wing, featuring
-                            state-of-the-art labs and AI-driven learning environments.</div>
+                        class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-8 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-all">
+                        <span class="font-headline text-2xl text-primary block mb-2">2020</span>
+                        <p class="text-on-surface-variant leading-relaxed">Continued academic activities by adapting to
+                            changing educational needs during the COVID-19 pandemic while ensuring uninterrupted
+                            learning.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Core Values -->
-        <section class="bg-primary-container py-xl text-on-primary-container transition-all duration-700 opacity-100">
-            <div class="max-w-7xl mx-auto px-md">
-                <div class="text-center mb-xl">
-                    <h2 class="font-headline-xl text-headline-xl text-white">Our Pillars of Growth</h2>
-                    <p class="text-on-primary-container/80">The fundamental beliefs that guide our academic and social
-                        conduct.</p>
+        <!-- Core Values (Pillars of Growth) -->
+        <section class="bg-primary-container py-24 text-on-primary-container">
+            <div class="max-w-container-max mx-auto px-6 text-center">
+                <div class="mb-16">
+                    <h2 class="font-headline text-4xl md:text-5xl text-white mb-4">Our Pillars of Growth</h2>
+                    <p class="text-white/80 text-lg">The fundamental beliefs that guide our academic and social conduct.
+                    </p>
                 </div>
-                <div class="grid md:grid-cols-3 gap-gutter">
-                    <div class="bg-white/5 p-lg rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
-                        <span class="material-symbols-outlined text-white text-5xl mb-md">star</span>
-                        <h3 class="font-headline-md text-white mb-xs">Excellence</h3>
-                        <p class="text-on-primary-container/70">Striving for the highest standards in everything we do,
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                        <span class="material-symbols-outlined text-white text-6xl mb-6">star</span>
+                        <h3 class="font-headline text-2xl text-white mb-4">Excellence</h3>
+                        <p class="text-white/70 leading-relaxed">Striving for the highest standards in everything we do,
                             from academics to sports and the arts.</p>
-                        <div class="mt-md h-1 w-12 bg-primary rounded-full"></div>
                     </div>
-                    <div class="bg-white/5 p-lg rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
-                        <span class="material-symbols-outlined text-white text-5xl mb-md">verified_user</span>
-                        <h3 class="font-headline-md text-white mb-xs">Integrity</h3>
-                        <p class="text-on-primary-container/70">Building a foundation of honesty, transparency, and
+                    <div
+                        class="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                        <span class="material-symbols-outlined text-white text-6xl mb-6">verified_user</span>
+                        <h3 class="font-headline text-2xl text-white mb-4">Integrity</h3>
+                        <p class="text-white/70 leading-relaxed">Building a foundation of honesty, transparency, and
                             ethical responsibility in our school community.</p>
-                        <div class="mt-md h-1 w-12 bg-primary rounded-full"></div>
                     </div>
-                    <div class="bg-white/5 p-lg rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
-                        <span class="material-symbols-outlined text-white text-5xl mb-md">lightbulb</span>
-                        <h3 class="font-headline-md text-white mb-xs">Innovation</h3>
-                        <p class="text-on-primary-container/70">Embracing new ideas and technologies to create a dynamic
-                            learning environment for the future.</p>
-                        <div class="mt-md h-1 w-12 bg-primary rounded-full"></div>
+                    <div
+                        class="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                        <span class="material-symbols-outlined text-white text-6xl mb-6">lightbulb</span>
+                        <h3 class="font-headline text-2xl text-white mb-4">Innovation</h3>
+                        <p class="text-white/70 leading-relaxed">Embracing new ideas and technologies to create a
+                            dynamic learning environment for the future.</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Faculty Overview -->
-        <section class="py-xl max-w-7xl mx-auto px-md transition-all duration-700 opacity-100">
-            <div class="grid lg:grid-cols-12 gap-xl items-center">
+        <section class="py-24 max-w-container-max mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
                 <div class="lg:col-span-5">
-                    <h2 class="font-headline-xl text-headline-xl mb-md">Our Distinguished Faculty</h2>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">At AM World School, our teachers
-                        are more than just instructors—they are mentors, researchers, and lifelong learners. With a 1:12
-                        teacher-to-student ratio, we ensure every child receives the guidance they deserve.</p>
-                    <ul class="space-y-sm">
-                        <li class="flex items-center gap-sm">
+                    <h2 class="font-headline text-4xl md:text-5xl mb-8 leading-tight">Our Distinguished Faculty</h2>
+                    <p class="text-lg text-on-surface-variant mb-10 leading-relaxed">At AM World School, our teachers
+                        are more than just instructors—they are mentors and lifelong learners. We ensure
+                        every child receives the guidance they deserve.</p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3">
                             <span class="material-symbols-outlined text-primary">check_circle</span>
-                            <span class="font-label-md">80% Faculty with Advanced Degrees</span>
+                            <span class="font-semibold text-on-surface">Highly Qualified and Experienced Teachers</span>
                         </li>
-                        <li class="flex items-center gap-sm">
+                        <li class="flex items-center gap-3">
                             <span class="material-symbols-outlined text-primary">check_circle</span>
-                            <span class="font-label-md">International Teaching Certifications</span>
+                            <span class="font-semibold text-on-surface">Modern Teaching Practices</span>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="font-semibold text-on-surface">Holistic Development &amp; Life Skills
+                                Training</span>
                         </li>
-                        <li class="flex items-center gap-sm">
+                        <li class="flex items-center gap-3">
                             <span class="material-symbols-outlined text-primary">check_circle</span>
-                            <span class="font-label-md">Continuous Professional Development Programs</span>
+                            <span class="font-semibold text-on-surface">Continuous Professional Development</span>
                         </li>
                     </ul>
-                    <button
-                        class="mt-lg border-2 border-primary text-primary px-lg py-sm rounded-lg font-label-md hover:bg-primary hover:text-white transition-all">
-                        Meet the Staff
-                    </button>
+                    <a class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all duration-300"
+                        href="admission.html">Meet the Staff</a>
                 </div>
-                <div class="lg:col-span-7 grid grid-cols-2 gap-md">
-                    <div class="space-y-md">
-                        <div class="rounded-xl overflow-hidden aspect-square shadow-sm bg-cover bg-center"
-                            data-alt="Teachers collaborating"
-                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3cxWwiQyVPvZ8fm6uzVlrptfYP--i-w6SLvnp86e3hvO0D3q6V14mgFtuZAkxkzo0We_5ePFThRVv_vy_m-jFb7wYKcBXrg1tZM2cFFU8Eb0-RnjESGGvIElUSPjWKXnwxig5uRJkzxNNS2TxcwTreCQokXxY5cbzmj8e83I72YNIhcD2FVnJX9rHDzuxT3IcE8eAN909Q-aSbwh8uBHvuAJBF3sIeLEkogCcro01Wl7jbTvlxgYo')">
+                <div class="lg:col-span-7 grid grid-cols-2 gap-8">
+                    <div class="space-y-8">
+                        <div
+                            class="rounded-3xl overflow-hidden aspect-square shadow-xl bg-gradient-to-br from-blue-100 to-blue-200 border border-blue-200 flex items-center justify-center transition-transform duration-300 hover:scale-[1.03]">
+                            <span class="material-symbols-outlined text-primary text-[130px]"
+                                style="font-variation-settings:'FILL' 1;">
+                                school
+                            </span>
                         </div>
-                        <div class="bg-primary/5 p-md rounded-xl border border-primary/20">
-                            <p class="font-headline-md text-primary">150+</p>
-                            <p class="text-caption">Academic Staff</p>
+                        <div class="bg-primary/5 p-5 rounded-3xl border border-primary/20 text-center">
+                            <p class="font-headline text-2xl text-primary mb-1">Experienced &amp; Dedicated Faculty</p>
+                            <!-- <p class="text-sm font-bold text-on-surface-variant uppercase tracking-widest">Sub-text here
+                            </p> -->
                         </div>
                     </div>
-                    <div class="space-y-md pt-lg">
-                        <div class="bg-secondary-container p-md rounded-xl">
-                            <p class="font-headline-md text-on-secondary-container">12:1</p>
-                            <p class="text-caption">Student-Teacher Ratio</p>
+                    <div class="space-y-8 pt-12">
+                        <div class="bg-secondary-container p-8 rounded-3xl text-center border border-white/50">
+                            <p class="font-headline text-2xl text-on-secondary-container mb-1">Learning with Care &amp;
+                                Guidance</p>
+                            <!-- <p class="text-sm font-bold text-on-secondary-container/80 uppercase tracking-widest">
+                                Sub-text here</p> -->
                         </div>
-                        <div class="rounded-xl overflow-hidden aspect-square shadow-sm bg-cover bg-center"
-                            data-alt="Science teacher in lab"
+                        <!-- <div class="rounded-3xl overflow-hidden aspect-square shadow-xl bg-cover bg-center transition-transform hover:scale-[1.02]"
                             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRwD3U9dF1FAnt7avm9Wq8HpX-oeGhqhTT2SaA7lgpUHUGm2gY5kHOkS71daf1Xv_HaI_JFyaNu2d88Y0AZTBb8qWoioG_V1bVcx9eLAoXuX-a2op5iUWyQHBNETZXsOIV0Jh35NDVWY8l2gOi6SByd8m3rx4E6LZPe2Ki7M0xh-3CPk8dbDhfGI-bf-W1eKpZGX14hxEUoJKj5PCl0FXnXnEPny94QuhbpCD1aMSWqu3ETRJ8WQF2')">
+                        </div> -->
+                        <div
+                            class="rounded-3xl overflow-hidden aspect-square shadow-xl bg-gradient-to-br from-blue-100 to-blue-200 border border-blue-200 flex items-center justify-center transition-transform duration-300 hover:scale-[1.03]">
+                            <span class="material-symbols-outlined text-primary text-[130px]"
+                                style="font-variation-settings:'FILL' 1;">
+                                workspace_premium
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Rules & Regulations -->
+        <section class="py-20 bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-headline text-4xl md:text-5xl mb-4">Rules & Regulations</h2>
+                    <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+                    <p class="text-on-surface-variant mt-4 text-lg">
+                        Students are expected to maintain discipline and follow school guidelines at all times.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <p>Attend school regularly and be punctual.</p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <p>Leave applications are required for absences exceeding two days.</p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <p>Medical certificate is mandatory for absences of more than three days.</p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <p>Reason for every absence must be recorded in the school diary.</p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <p>Students cannot leave the campus during school hours without permission.</p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <p>Tests and examinations will not be rescheduled due to absence.</p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <p>Long leave for family functions or weddings is not permitted.</p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <p>No leave is granted during major school events and functions.</p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <p>Minimum 80% attendance is compulsory; below 60% may result in repeating the class.</p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <p>Minimum passing marks are 40% in every subject (Middle & High School).</p>
+                    </div>
+                </div>
+                <!-- Leave Rules -->
+                <div class="mt-16">
+                    <div class="text-center mb-10">
+                        <h3 class="font-headline text-3xl md:text-4xl mb-3">Leave Rules</h3>
+                        <div class="h-1 w-16 bg-primary mx-auto rounded-full"></div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex gap-3">
+                            <span class="material-symbols-outlined text-primary">event_busy</span>
+                            <p>Leave must be requested in advance through a written application from parents/guardians.
+                            </p>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <span class="material-symbols-outlined text-primary">event_busy</span>
+                            <p>Online or email leave applications are not accepted.</p>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <span class="material-symbols-outlined text-primary">event_busy</span>
+                            <p>Students absent without prior leave must submit a signed application on returning.</p>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <span class="material-symbols-outlined text-primary">event_busy</span>
+                            <p>A medical fitness certificate is required after recovery from contagious illnesses.</p>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <span class="material-symbols-outlined text-primary">event_busy</span>
+                            <p>Students must report on the reopening day after vacations. Late return without approval
+                                may attract a fine.</p>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <span class="material-symbols-outlined text-primary">event_busy</span>
+                            <p>Absence for more than 10 consecutive days may result in removal from the school rolls.
+                            </p>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <span class="material-symbols-outlined text-primary">event_busy</span>
+                            <p>Early departure during school hours is allowed only with prior written permission.</p>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <span class="material-symbols-outlined text-primary">event_busy</span>
+                            <p>Students will be released only to parents/guardians unless written authorization is
+                                provided.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
     </main>
     <!-- Footer -->
-    <footer class="w-full mt-xl bg-primary-container py-xl text-on-primary-container">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-7xl mx-auto px-md">
+    <footer class="bg-primary w-full text-on-primary">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-gutter py-margin-desktop">
             <div>
-                <div class="font-headline-md text-headline-md font-bold text-white mb-md">AM World School</div>
-                <p class="text-on-primary-container/80 text-body-md mb-md">Nurturing excellence and integrity since
-                    1988. Join our global community of learners.</p>
-                <div class="flex gap-sm">
-                    <span
-                        class="material-symbols-outlined cursor-pointer hover:text-primary-fixed-dim transition-colors">public</span>
-                    <span
-                        class="material-symbols-outlined cursor-pointer hover:text-primary-fixed-dim transition-colors">school</span>
-                    <span
-                        class="material-symbols-outlined cursor-pointer hover:text-primary-fixed-dim transition-colors">groups</span>
+                <div class="font-headline-sm text-3xl text-headline-sm font-bold text-secondary-container mb-4">
+                    AM World School
+                </div>
+                <p class="font-body-md text-body-md opacity-80">
+                    Little Hands will win the World.
+                    <br />
+                    A premier institution dedicated to
+                    academic excellence.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md uppercase text-secondary-container mb-4">Contact
+                    Info</h4>
+                <div class="flex flex-col gap-unit font-body-md text-body-md opacity-80">
+                    <p class="flex justify-center gap-3 w-fit mx-auto md:mx-0 md:w-full md:justify-start">
+                        <span class="material-symbols-outlined text-[20px] flex-shrink-0">location_on</span>
+                        <span>AM WORLD SCHOOL, Bahjoi Road, Maulagarh, Chandausi, Sambhal<br />Pin
+                            code: 244412</span>
+                    </p>
+                    <br>
+                    <p class="flex items-center justify-center gap-3 w-fit mx-auto md:mx-0 md:w-full md:justify-start">
+                        <span class="material-symbols-outlined text-[20px] flex-shrink-0">
+                            phone
+                        </span>
+                        <span class="text-center md:text-left">
+                            +91 9012688800<br>
+                            +91 8002148800
+                        </span>
+                    </p>
+
+                    <p
+                        class="flex items-center justify-center gap-3 w-fit mx-auto md:mx-0 md:w-full md:justify-start mt-4">
+                        <span class="material-symbols-outlined text-[20px] flex-shrink-0">
+                            mail
+                        </span>
+                        <span class="text-center md:text-left">
+                            amworldschools@gmail.com
+                        </span>
+                    </p>
                 </div>
             </div>
             <div>
-                <h4 class="font-bold text-white mb-md">Quick Links</h4>
-                <ul class="space-y-sm text-on-primary-container/80">
-                    <li class=""><a class="hover:text-white hover:underline transition-all" href="#">Admissions
-                            Policy</a></li>
-                    <li class=""><a class="hover:text-white hover:underline transition-all" href="#">Academic
-                            Calendar</a></li>
-                    <li class=""><a class="hover:text-white hover:underline transition-all" href="#">Career
-                            Opportunities</a></li>
-                    <li class=""><a class="hover:text-white hover:underline transition-all" href="#">Alumni Portal</a>
-                    </li>
+                <h4 class="font-label-md text-label-md uppercase text-secondary-container mb-4">Quick
+                    Links</h4>
+                <ul class="space-y-2 font-body-md text-body-md opacity-80">
+                    <li><a class="hover:text-secondary-fixed hover:underline transition-all duration-200"
+                            href="stitch_am_world_school_website (1)/index.html">Quick
+                            Links</a></li>
+                    <li><a class="hover:text-secondary-fixed hover:underline transition-all duration-200"
+                            href="stitch_am_world_school_website (1)/news.html">News
+                            &amp; Events</a></li>
+                    <li><a class="hover:text-secondary-fixed hover:underline transition-all duration-200"
+                            href="stitch_am_world_school_website (1)/gallery.html">Gallery</a></li>
+                    <li><a class="hover:text-secondary-fixed hover:underline transition-all duration-200"
+                            href="#">Privacy Policy</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold text-white mb-md">Contact Info</h4>
-                <ul class="space-y-sm text-on-primary-container/80">
-                    <li class="flex items-start gap-xs">
-                        <span class="material-symbols-outlined text-sm text-primary-fixed-dim">location_on</span>
-                        <span class="">123 Academic Way, Education District, City Park</span>
-                    </li>
-                    <li class="flex items-center gap-xs">
-                        <span class="material-symbols-outlined text-sm text-primary-fixed-dim">call</span>
-                        <span class="">+1 (555) 0123-4567</span>
-                    </li>
-                    <li class="flex items-center gap-xs">
-                        <span class="material-symbols-outlined text-sm text-primary-fixed-dim">mail</span>
-                        <span class="">info@amworldschool.edu</span>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold text-white mb-md">Newsletter Signup</h4>
-                <p class="text-caption mb-sm">Stay updated with our latest news and events.</p>
-                <div class="flex gap-xs">
+                <h4 class="font-label-md text-label-md uppercase text-secondary-container mb-4">
+                    Newsletter</h4>
+                <p class="font-body-md text-body-md opacity-80 mb-4">Stay updated with our latest
+                    academic events and news.</p>
+                <div class="flex">
                     <input
-                        class="bg-white/10 border border-white/20 rounded-lg px-sm py-xs text-white placeholder:text-white/40 focus:ring-1 focus:ring-primary-fixed outline-none w-full"
-                        placeholder="Email Address" type="email">
-                    <button class="bg-primary text-white px-sm rounded-lg hover:brightness-110">
-                        <span class="material-symbols-outlined">send</span>
-                    </button>
+                        class="bg-primary-container border border-outline rounded-l-lg px-3 py-2 text-sm w-full focus:ring-1 focus:ring-secondary-container outline-none text-on-primary placeholder:text-on-primary/50"
+                        placeholder="Your email" type="email" />
+                    <button
+                        class="bg-secondary-container text-on-secondary-container px-4 rounded-r-lg font-label-md text-label-md font-bold hover:brightness-110 transition-all">Join</button>
                 </div>
             </div>
         </div>
         <div
-            class="max-w-7xl mx-auto px-md mt-lg pt-md border-t border-white/10 text-center text-caption text-on-primary-container/50">
-            © 2024 AM World School. All rights reserved. | Privacy Policy | Terms of Service
+            class="border-t border-on-primary/20 py-4 text-center font-body-md text-body-md opacity-60 max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between gap-1">
+            <span>© 2026 AM World School. All rights reserved.</span>
+            <span>Made with ❤️ by Alekh Singh (Alumnus of AM World School)</span>
         </div>
-    </footer>
-    <script>
-        // Simple intersection observer for subtle fade-in effects
-        const observerOptions = {
-            threshold: 0.1
-        };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('opacity-0', 'translate-y-4');
-                }
+
+        <!-- <script>
+            const menuBtn = document.getElementById("menuBtn");
+
+            const closeBtn = document.getElementById("closeMenu");
+
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            menuBtn.addEventListener("click", () => {
+
+                mobileMenu.classList.remove("translate-y-[-100%]", "opacity-0");
+
+                mobileMenu.classList.add("translate-y-0", "opacity-100");
+
+                document.body.style.overflow = "hidden";
+
             });
-        }, observerOptions);
 
-        // Apply to sections
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
-            observer.observe(section);
-        });
-    </script>
+            closeBtn.addEventListener("click", () => {
+
+                mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
+
+                mobileMenu.classList.remove("translate-y-0", "opacity-100");
+
+                document.body.style.overflow = "";
+
+            });
+
+            document.querySelectorAll("#mobileMenu a.mobile-link").forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
+                    mobileMenu.classList.remove("translate-y-0", "opacity-100");
+                    document.body.style.overflow = "";
+
+                });
+
+            });
 
 
+            const loginToggle = document.getElementById("loginToggle");
+            const loginMenu = document.getElementById("loginMenu");
+            const loginArrow = document.getElementById("loginArrow");
+
+            loginToggle.addEventListener("click", () => {
+
+                loginMenu.classList.toggle("hidden");
+
+                loginMenu.classList.toggle("flex");
+
+                loginArrow.classList.toggle("rotate-180");
+
+            });
+        </script> -->
+        <script src="javamobilemenu.js"></script>
+        <script>
+            const aboutToggle = document.getElementById("aboutToggle");
+            const aboutMenu = document.getElementById("aboutMenu");
+            const aboutArrow = document.getElementById("aboutArrow");
+
+            aboutToggle.addEventListener("click", () => {
+
+                aboutMenu.classList.toggle("hidden");
+                aboutMenu.classList.toggle("flex");
+
+                aboutArrow.classList.toggle("rotate-180");
+
+            });
+        </script>
+        <script src="javaabout_us.js"></script>
 </body>
 
 </html>

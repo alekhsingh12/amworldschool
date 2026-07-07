@@ -1,0 +1,485 @@
+/* ===========================
+   COLORS
+=========================== */
+:root {
+        --outline-variant: #e9bcb5;
+        --background: #faf9f7;
+        --tertiary-fixed: #e3e2e2;
+        --on-secondary: #ffffff;
+        --on-tertiary-fixed: #1b1c1c;
+        --primary-container: #e30003;
+        --inverse-surface: #2f3130;
+        --surface: #faf9f7;
+        --secondary-fixed-dim: #c8c6c5;
+        --surface-tint: #c00002;
+        --inverse-on-surface: #f1f1ef;
+        --surface-container: #efeeec;
+        --on-background: #1a1c1b;
+        --tertiary-container: #707070;
+        --surface-container-lowest: #ffffff;
+        --on-primary-fixed-variant: #930001;
+        --on-secondary-fixed: #1c1b1b;
+        --surface-container-low: #f4f3f1;
+        --surface-container-high: #e9e8e6;
+        --surface-variant: #e3e2e0;
+        --on-tertiary-container: #f6f5f4;
+        --tertiary: #575858;
+        --secondary: #5f5e5e;
+        --little: #f5d0d0;
+        --error: #ba1a1a;
+        --surface-dim: #dadad8;
+        --surface-bright: #faf9f7;
+        --on-surface: #1a1c1b;
+        --outline: #946e68;
+        --primary-fixed: #ffdad4;
+        --inverse-primary: #ffb4a8;
+        --on-tertiary: #ffffff;
+        --on-error: #ffffff;
+        --on-tertiary-fixed-variant: #464747;
+        --on-surface-variant: #5f3f3a;
+        --error-container: #ffdad6;
+        --on-error-container: #93000a;
+        --on-secondary-fixed-variant: #474746;
+        --on-secondary-container: #636262;
+        --on-primary: #ffffff;
+        --secondary-container: #e2dfde;
+        --tertiary-fixed-dim: #c7c6c6;
+        --secondary-fixed: #e5e2e1;
+        --primary-fixed-dim: #ffb4a8;
+        --on-primary-container: #fff3f2;
+        --surface-container-highest: #e3e2e0;
+        --on-primary-fixed: #410000;
+        --primary: #b40002;
+}
+
+/* ===========================
+   BORDER RADIUS
+=========================== */
+:root {
+        --radius: 0.25rem;
+        --radius-lg: 0.5rem;
+        --radius-xl: 0.75rem;
+        --radius-full: 9999px;
+}
+
+/* ===========================
+   SPACING
+=========================== */
+:root {
+        --gutter: 24px;
+        --unit: 4px;
+        --container-max: 1120px;
+        --margin-mobile: 20px;
+        --margin-desktop: 64px;
+}
+
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+
+body {
+        font-family: "Source Serif 4", serif;
+        background: var(--background);
+        color: var(--on-background);
+}
+
+/* Body */
+.body-md {
+        font-family: "Source Serif 4", serif;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+}
+
+.body-lg {
+        font-family: "Source Serif 4", serif;
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: 400;
+}
+
+/* Display */
+.display-lg {
+        font-family: "Playfair Display", serif;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+}
+
+.display-lg-mobile {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.01em;
+        font-weight: 700;
+}
+
+/* Headlines */
+.headline-md {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 600;
+}
+
+.headline-sm {
+        font-family: "Playfair Display", serif;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+}
+
+/* Labels */
+.label-md {
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+}
+
+.label-sm {
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        font-weight: 600;
+}
+
+/* ===========================
+   OPTIONAL UTILITY CLASSES
+=========================== */
+
+.bg-primary {
+        background: var(--primary);
+}
+
+.bg-surface {
+        background: var(--surface);
+}
+
+.bg-background {
+        background: var(--background);
+}
+
+.text-primary {
+        color: var(--primary);
+}
+
+.text-secondary {
+        color: var(--secondary);
+}
+
+.text-on-background {
+        color: var(--on-background);
+}
+
+.border-outline {
+        border: 1px solid var(--outline);
+}
+
+.border-outline-variant {
+        border: 1px solid var(--outline-variant);
+}
+
+.rounded {
+        border-radius: var(--radius);
+}
+
+.rounded-lg {
+        border-radius: var(--radius-lg);
+}
+
+.rounded-xl {
+        border-radius: var(--radius-xl);
+}
+
+.rounded-full {
+        border-radius: var(--radius-full);
+}
+
+.container {
+        max-width: var(--container-max);
+        margin: 0 auto;
+        padding-inline: var(--margin-mobile);
+}
+
+@media (min-width: 768px) {
+        .container {
+                padding-inline: var(--margin-desktop);
+        }
+}
+
+
+
+.material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined.filled {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Glass Navbar */
+/* Dynamic Island Navbar */
+
+.glass-nav {
+        background: rgba(255, 255, 255, .18);
+        backdrop-filter: blur(28px) saturate(180%);
+        -webkit-backdrop-filter: blur(28px) saturate(180%);
+
+        border: 1px solid rgba(255, 255, 255, .22);
+
+        border-radius: 999px;
+
+        box-shadow:
+                0 10px 35px rgba(0, 0, 0, .14),
+                inset 0 1px 1px rgba(255, 255, 255, .35);
+
+        transition: all .35s ease;
+
+        overflow: visible;
+}
+
+.glass-nav:hover {
+        transform: translateX(-50%) translateY(-2px);
+        background: rgba(255, 255, 255, .22);
+        box-shadow:
+                0 18px 45px rgba(0, 0, 0, .18),
+                inset 0 1px 1px rgba(255, 255, 255, .4);
+}
+
+/* Desktop */
+#scroll-container {
+        height: 400vh;
+}
+
+@media (max-width:768px) {
+
+        #scroll-container {
+                height: 220vh;
+        }
+
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+   Desktop remains unchanged
+=========================== */
+
+@media screen and (max-width:768px) {
+
+        /* html,
+                        body {
+                                overflow-x: hidden;
+                        } */
+        /* Mobile Scroll Animation */
+        #scroll-container {
+                height: 180vh !important;
+        }
+
+        #sticky-wrapper {
+                height: 100vh !important;
+        }
+
+        #scroll-canvas {
+                object-fit: contain !important;
+        }
+
+        /* Text positioning */
+        #slide-1,
+        #slide-4 {
+                width: 95%;
+                max-width: 95%;
+                padding: 0 16px;
+        }
+
+        /* Optional: keep text lower on mobile */
+        /* #slide-1,
+                        #slide-4 {
+                                top: 55%;
+                                transform: translateY(-50%);
+                        } */
+
+        /* Navbar */
+
+        nav .max-w-container-max {
+                padding: 12px 16px;
+        }
+
+        nav img {
+                height: 42px !important;
+        }
+
+        nav span.font-headline-sm {
+                font-size: 18px;
+        }
+
+        /* Hide desktop menu */
+
+        nav .md\:flex {
+                display: none !important;
+        }
+
+        /* Show menu icon */
+
+        .material-symbols-outlined.menu-mobile {
+                display: block !important;
+                font-size: 34px;
+                cursor: pointer;
+        }
+
+        /* Hero */
+
+        #scroll-container {
+                height: 260vh !important;
+        }
+
+        #slide-1,
+        #slide-4 {
+                width: 90%;
+                max-width: 100%;
+                padding: 0 20px;
+        }
+
+        #slide-1 h1 {
+                font-size: 34px !important;
+                line-height: 42px !important;
+        }
+
+        #slide-4 h2 {
+                font-size: 30px !important;
+                line-height: 38px !important;
+        }
+
+        #slide-1 p,
+        #slide-4 p {
+                font-size: 18px !important;
+                line-height: 30px !important;
+        }
+
+        /* Buttons */
+
+        button {
+                width: 100%;
+        }
+
+        #slide-4 .flex {
+                width: 100%;
+        }
+
+        /* About */
+
+        section.grid {
+                gap: 20px;
+        }
+
+        /* Director Principal */
+
+        .group .relative.h-\[400px\] {
+                height: 280px !important;
+        }
+
+        /* Cards */
+
+        .grid.md\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+        }
+
+        .grid.md\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+        }
+
+        /* CTA */
+
+        section.bg-primary {
+                text-align: center;
+        }
+
+        section.bg-primary button {
+                width: 100%;
+        }
+
+        /* Footer */
+
+        footer {
+                text-align: center;
+        }
+
+        footer>div {
+                width: 100%;
+                max-width: 100%;
+                align-items: center;
+        }
+
+        footer .md\:items-end {
+                align-items: center !important;
+        }
+
+}
+
+@media (max-width:768px) {
+
+        .glass-nav {
+
+                width: 90%;
+                top: 12px;
+
+                border-radius: 999px;
+
+        }
+
+        .glass-nav>div {
+                padding: 12px 18px;
+        }
+
+}
+
+/* Mobile menu */
+.mobile-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 28px;
+        font-size: 17px;
+        font-weight: 600;
+        transition: all .3s ease;
+}
+
+.mobile-link:hover {
+
+        background: #f8f8f8;
+
+        padding-left: 45px;
+
+        color: #b40002;
+
+}
+
+.mobile-link.active {
+
+        color: #b40002;
+
+        font-weight: 700;
+
+}
+
+/* New */
+#mobileMenu {
+        height: 100vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+}
+
+#mobileMenu::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Edge, Safari */
+}
+
+/* Ensure filter box hides correctly despite responsive display classes */
+#filterBox.hidden {
+        display: none !important;
+}
