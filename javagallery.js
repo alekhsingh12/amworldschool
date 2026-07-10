@@ -23,8 +23,8 @@ const loader = new THREE.TextureLoader();
 
 const imagePath =
     window.matchMedia("(max-width: 992px)").matches
-        ? "../sky.jpeg"
-        : "../building.jpeg";
+        ? "sky.jpeg"
+        : "building.jpeg";
 const texture = loader.load(imagePath);
 
 
