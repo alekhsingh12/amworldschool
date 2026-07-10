@@ -14,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-        <link href="favicon-96x96.png" rel="icon" type="image/png" />
+    <link href="favicon-96x96.png" rel="icon" type="image/png" />
 
     <script id="tailwind-config">
         tailwind.config = {
@@ -166,179 +166,19 @@
             font-family: Inter;
 
         }
-
     </style>
 </head>
 
 <body class="bg-background text-on-background font-body antialiased flex flex-col min-h-screen">
     <!-- TopNavBar -->
-    <nav id="navbartop" class="glass-nav fixed top-5 left-1/2 -translate-x-1/2 z-50
-w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
-
-        <div class="flex justify-between items-center px-6 py-3">
-            <a href="index.html" class="flex items-center gap-3">
-                <img src="amws logo.jpg" alt="AM World School Logo" class="h-12 w-auto object-contain"
-                    onerror="this.style.display='none'" />
-                <span class="font-headline-sm text-headline-sm text-primary font-bold hidden sm:inline" style="font-family: 'Playfair Display', serif; font-size: 24px;">
-                    AM World School
-                </span>
-            </a>
-
-            <!--<div class="font-headline-sm text-headline-sm text-primary font-bold">
-                                AM World School
-                        </div>-->
-            <div class="hidden md:flex items-center gap-gutter font-label-md text-label-md">
-                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
-                    href="index.html">Home</a>
-                <a class="text-primary font-bold text-[16px] border-b-2 border-secondary pb-1 transition-colors duration-200"
-                    href="about_us.html">About Us</a>
-                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
-                    href="admission.html">Admissions</a>
-                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
-                    href="academic.html">Academic</a>
-                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
-                    href="downloads.html">Downloads</a>
-                <a class="text-on-surface-variant font-bold text-[16px] hover:text-secondary transition-colors duration-200"
-                    href="facilities.html">Facilities</a>
-            </div>
-            <div class="flex items-center gap-unit">
-                <button
-                    class="hidden md:inline-flex items-center justify-center px-4 py-2 bg-little text-primary font-bold font-label-md text-label-md rounded-lg hover:bg-secondary-fixed-dim transition-colors"><a
-                        href="contact_us.html">Contact
-                        Us</a></button>
-                <!-- Login Dropdown -->
-                <div class="relative group hidden md:block">
-
-                    <button
-                        class="inline-flex items-center justify-center gap-1 px-4 py-1.5 bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary-container transition-all duration-300">
-                        Login
-                        <span
-                            class="material-symbols-outlined text-lg transition-transform duration-300 group-hover:rotate-180">
-                            expand_more
-                        </span>
-                    </button>
-
-                    <!-- Dropdown Menu -->
-                    <div
-                        class="absolute right-0 mt-2 w-62 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible translate-y-3 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out overflow-hidden z-50">
-
-                        <a href="https://play.google.com/store/apps/details?id=simption.amworldschoolchandausi"
-                            class="block px-6 py-3 whitespace-nowrap hover:bg-red-50 hover:text-red-700 transition-all duration-200">
-                            🎓 Student & Parents Login
-                        </a>
-
-                        <a href="https://simptionsmartsoftware.com/amworldschool/"
-                            class="block px-6 py-3 whitespace-nowrap hover:bg-red-50 hover:text-red-700 transition-all duration-200 border-t">
-                            💻 ERP Login
-                        </a>
-
-                    </div>
-
-                </div>
-                <div class="flex items-center gap-3 md:hidden">
-                    <a href="about_us.html" class="relative text-primary font-bold text-[18px]
-                    whitespace-nowrap
-           after:absolute after:left-0 after:-bottom-1
-           after:h-[2px] after:w-full
-           after:bg-primary after:rounded-full">
-                        About Us
-                    </a>
-
-                    <button id="menuBtn">
-                        <span class="material-symbols-outlined text-[34px]">
-                            menu
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- Mobile Menu -->
-
-    <div id="mobileMenu" class="fixed inset-0
-    bg-white/80
-    backdrop-blur-2xl
-    z-[999]
-    overflow-y-auto
-    overscroll-contain
-    translate-y-[-100%]
-    opacity-0
-    transition-all
-    duration-500
-    ease-in-out">
-
-        <button id="closeMenu" class="fixed top-6 right-6 z-[1001]
-    w-12 h-12
-    flex items-center justify-center
-    rounded-full
-    bg-white/70
-    backdrop-blur-xl
-    shadow-lg
-    hover:bg-white
-    transition">
-
-            <span class="material-symbols-outlined text-3xl">
-                close
-            </span>
-
-        </button>
-
-        <div class="pt-8 px-6">
-
-            <span class="font-bold text-2xl text-primary">
-                AM World School
-            </span>
-
-        </div>
-
-        <div class="flex flex-col pt-8 pb-10">
-
-            <a href="index.html" class="mobile-link">Home</a>
-
-            <a href="about_us.html" class="mobile-link active">About Us</a>
-
-            <a href="admission.html" class="mobile-link">Admissions</a>
-
-            <a href="academic.html" class="mobile-link">Academic</a>
-
-            <a href="downloads.html" class="mobile-link">Downloads</a>
-
-            <a href="facilities.html" class="mobile-link">Facilities</a>
-
-            <a href="contact_us.html" class="mobile-link">Contact Us</a>
-
-            <hr class="my-6">
-
-            <button id="loginToggle" class="mobile-link w-full">
-                <span>Login</span>
-
-                <span id="loginArrow" class="material-symbols-outlined transition-transform duration-300">
-                    expand_more
-                </span>
-            </button>
-
-            <div id="loginMenu" class="hidden flex-col bg-gray-50">
-
-                <a href="https://play.google.com/store/apps/details?id=simption.amworldschoolchandausi"
-                    class="mobile-link pl-12 text-[16px]">
-                    🎓 Students & Parents Login
-                </a>
-
-                <a href="https://simptionsmartsoftware.com/amworldschool/" class="mobile-link pl-12 text-[16px]">
-                    💻 ERP Login
-                </a>
-
-            </div>
-
-        </div>
-
+    <div id="navbartop">
+        <div id="navbar"></div>
     </div>
-
     <main class="flex-grow">
         <!-- Hero Section -->
         <section class="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0"
-                style="background-image: url('amws.jpg'); background-size: cover; background-position: center;">
+                style="background-image: url('../amws.jpg'); background-size: cover; background-position: center;">
             </div>
             <div class="absolute inset-0 bg-primary/30 backdrop-brightness-75 z-10"></div>
             <div class="relative z-20 text-center px-6 max-w-4xl mt-20">
@@ -351,7 +191,7 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
             </div>
         </section>
         <!-- Vision & Mission -->
-        <section class="py-20 max-w-container-max mx-auto px-6">
+        <section id="vision-mission" class="py-20 max-w-container-max mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12">
                 <div
                     class="bg-white p-10 rounded-2xl border border-outline-variant shadow-sm hover:shadow-lg transition-all duration-300">
@@ -424,7 +264,7 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
                     <div class="lg:col-span-5 lg:order-2 order-1 relative">
 
                         <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-cover bg-center"
-                            style="background-image: url('director.webp');">
+                            style="background-image: url('../director.webp');">
                         </div>
 
                         <div
@@ -447,7 +287,7 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
                 <div class="grid lg:grid-cols-12 gap-16 items-center">
                     <div class="lg:col-span-5 relative">
                         <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-cover bg-center"
-                            style="background-image: url('principal.webp')">
+                            style="background-image: url('../principal.webp')">
                         </div>
                         <div
                             class="absolute -bottom-8 -right-8 bg-secondary-container text-on-secondary-container p-8 rounded-2xl shadow-xl hidden md:block max-w-xs border border-white/50 backdrop-blur-sm">
@@ -482,7 +322,7 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
 
 
         <!-- History & Heritage (Our Journey) -->
-        <section class="py-24 max-w-container-max mx-auto px-6">
+        <section id="our-journey" class="py-24 max-w-container-max mx-auto px-6">
             <div class="text-center mb-20">
                 <h2 class="font-headline text-4xl md:text-5xl mb-4">Our Journey</h2>
                 <div class="h-1 w-20 bg-primary mx-auto mb-6 rounded-full"></div>
@@ -535,7 +375,7 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
             </div>
         </section>
         <!-- Core Values (Pillars of Growth) -->
-        <section class="bg-primary-container py-24 text-on-primary-container">
+        <section id="pillars-growth" class="bg-primary-container py-24 text-on-primary-container">
             <div class="max-w-container-max mx-auto px-6 text-center">
                 <div class="mb-16">
                     <h2 class="font-headline text-4xl md:text-5xl text-white mb-4">Our Pillars of Growth</h2>
@@ -568,7 +408,7 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
             </div>
         </section>
         <!-- Faculty Overview -->
-        <section class="py-24 max-w-container-max mx-auto px-6">
+        <section id="faculty" class="py-24 max-w-container-max mx-auto px-6">
             <div class="grid lg:grid-cols-12 gap-16 items-center">
                 <div class="lg:col-span-5">
                     <h2 class="font-headline text-4xl md:text-5xl mb-8 leading-tight">Our Distinguished Faculty</h2>
@@ -633,7 +473,7 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
             </div>
         </section>
         <!-- Rules & Regulations -->
-        <section class="py-20 bg-surface-container-low">
+        <section id="rules-regulations" class="py-20 bg-surface-container-low">
             <div class="max-w-container-max mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="font-headline text-4xl md:text-5xl mb-4">Rules & Regulations</h2>
@@ -889,7 +729,7 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
             });
         </script> -->
         <script src="javamobilemenu.js"></script>
-        <script>
+        <!-- <script>
             const aboutToggle = document.getElementById("aboutToggle");
             const aboutMenu = document.getElementById("aboutMenu");
             const aboutArrow = document.getElementById("aboutArrow");
@@ -902,7 +742,8 @@ w-[95%] md:w-[92%] lg:w-[86%] xl:w-[80%] 2xl:w-[76%] max-w-7xl">
                 aboutArrow.classList.toggle("rotate-180");
 
             });
-        </script>
+        </script> -->
+        <script src="include.js"></script>
         <script src="javaabout_us.js"></script>
 </body>
 

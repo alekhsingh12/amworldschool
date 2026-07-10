@@ -1,4 +1,70 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
+
+
+
+    const slider = document.getElementById("alumniSlider");
+
+    const slides = slider.children;
+
+    const totalSlides = slides.length;
+
+    let current = 0;
+
+    function showSlide(index) {
+
+        if (index < 0) index = totalSlides - 1;
+
+        if (index >= totalSlides) index = 0;
+
+        current = index;
+
+        slider.style.transform = `translateX(-${current * 100}%)`;
+
+    }
+
+    document.getElementById("nextAlumni").addEventListener("click", () => {
+
+        showSlide(current + 1);
+
+        restartAuto();
+
+    });
+
+    document.getElementById("prevAlumni").addEventListener("click", () => {
+
+        showSlide(current - 1);
+
+        restartAuto();
+
+    });
+
+    let auto = setInterval(() => {
+
+        showSlide(current + 1);
+
+    }, 4000);
+
+    function restartAuto() {
+
+        clearInterval(auto);
+
+        auto = setInterval(() => {
+
+            showSlide(current + 1);
+
+        }, 4000);
+
+    }
+
+
+
+
+
+
+
+
     const canvas = document.getElementById("scroll-canvas");
     const context = canvas.getContext("2d");
     const scrollContainer = document.getElementById("scroll-container");
@@ -174,3 +240,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", onScroll);
     window.addEventListener("resize", onResize);
 });
+
+
+
+
+

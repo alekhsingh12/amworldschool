@@ -268,7 +268,7 @@ body {
    Desktop remains unchanged
 =========================== */
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1020px) {
 
         /* html,
                         body {
@@ -419,7 +419,7 @@ body {
 
 }
 
-@media (max-width:768px) {
+@media (max-width:1020px) {
 
         .glass-nav {
 
@@ -482,4 +482,254 @@ body {
 /* Ensure filter box hides correctly despite responsive display classes */
 #filterBox.hidden {
         display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   Glass Dropdown
+=========================== */
+
+.glass-dropdown {
+
+        background: rgba(255, 255, 255, 1);
+
+        backdrop-filter: blur(28px) saturate(180%);
+        -webkit-backdrop-filter: blur(28px) saturate(180%);
+
+        border: 1px solid rgba(255, 255, 255, .25);
+
+        border-radius: 20px;
+
+        box-shadow:
+                0 15px 40px rgba(0, 0, 0, .18),
+                inset 0 1px 1px rgba(255, 255, 255, .35);
+
+        overflow: hidden;
+
+        animation: dropdownBlur .35s ease;
+}
+
+.dropdown-item {
+
+        display: flex;
+        align-items: center;
+
+        padding: 15px 22px;
+
+        color: #333;
+
+        font-family: "Source Serif 4", serif;
+
+        font-size: 15px;
+
+        font-weight: 500;
+
+        line-height: 1.5;
+
+        text-decoration: none;
+
+        transition: all .25s ease;
+
+        position: relative;
+
+}
+
+.dropdown-item:not(:last-child) {
+
+        border-bottom: 1px solid rgba(255, 255, 255, .18);
+
+}
+
+.dropdown-item:hover {
+
+        background: rgba(255, 255, 255, .55);
+
+        color: #b40002;
+
+        padding-left: 28px;
+
+        backdrop-filter: blur(35px);
+
+}
+
+
+
+
+.dropdown-item::before {
+
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+
+        top: 0;
+
+        width: 4px;
+
+        height: 100%;
+
+        background: #b40002;
+
+        transform: scaleY(0);
+
+        transition: .25s ease;
+
+}
+
+.dropdown-item:hover::before {
+
+        transform: scaleY(1);
+
+}
+
+
+
+.dropdown-item.active {
+        color: #b40002;
+        font-weight: 700;
+        background: rgba(180, 0, 2, 0.08);
+}
+
+.dropdown-item.active::before {
+        transform: scaleY(1);
+}
+
+
+
+/* Fade + Slide Animation */
+
+@keyframes dropdownBlur {
+
+        from {
+
+                opacity: 0;
+
+                transform: translateY(12px) scale(.97);
+
+                filter: blur(10px);
+
+        }
+
+        to {
+
+                opacity: 1;
+
+                transform: translateY(0) scale(1);
+
+                filter: blur(0);
+
+        }
+
+}
+
+/* Mobile submenu */
+
+#aboutMenu .mobile-link {
+
+        padding-left: 3.5rem;
+
+        font-family: "Source Serif 4", serif;
+
+        font-size: 16px;
+
+        font-weight: 500;
+
+        background: rgba(255, 255, 255, .55);
+
+}
+
+#aboutMenu .mobile-link:hover {
+
+        padding-left: 4rem;
+
+}
+
+
+
+.nav-link.active,
+#moreBtn.active {
+        color: #b40002;
+        font-weight: 700;
+}
+
+.nav-link.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background: #b40002;
+}
+
+.nav-link {
+        position: relative;
+}
+
+
+#mobileMenu .nav-link.active::after {
+        display: none;
+}
+
+#moreMenu .nav-link.active::after {
+        content: none;
+}
+
+.desktop-nav-link.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background: #b40002;
+}
+
+
+html {
+        scroll-behavior: smooth;
+}
+
+section,
+h3[id] {
+        scroll-margin-top: 100px;
+}
+
+#registration-process {
+        scroll-margin-top: 110px;
+}
+
+#apply-online {
+        scroll-margin-top: 0px;
+}
+
+#admission-policy {
+        scroll-margin-top: 10px;
+}
+
+#required-documents {
+        scroll-margin-top: 150px;
+}
+
+#faculty {
+        scroll-margin-top: 60px;
+}
+
+#digital-campus {
+        scroll-margin-top: 10px;
+}
+
+#transport {
+        scroll-margin-top: 60px;
 }

@@ -261,54 +261,38 @@ if (closeFilter) {
 
 
 
-fetch("api/get_downloads.php")
-    .then(r => r.json())
-    .then(files => {
+// Filter from navbar dropdown
+const params = new URLSearchParams(window.location.search);
+const navbarCategory = params.get("category");
 
-        const grid = document.getElementById("downloadsGrid");
+if (navbarCategory) {
 
-        grid.innerHTML = "";
+    // Check the corresponding checkbox
+    document.querySelectorAll(".category").forEach(box => {
+        box.checked = (box.value === navbarCategory);
+    });
 
-        files.forEach(file => {
+    updateFilterButton();
 
-            grid.innerHTML += `
+    // Filter cards
+    document.querySelectorAll("#downloadsGrid > div").forEach(card => {
 
-<div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col">
+        const category = card.dataset.category;
+        const session = card.dataset.session;
 
-<div class="flex justify-between mb-4">
+        const selectedSessions = [
+            ...document.querySelectorAll(".session:checked")
+        ].map(item => item.value);
 
-<span class="material-symbols-outlined text-red-600 text-5xl">
-picture_as_pdf
-</span>
+        const sessionMatch =
+            selectedSessions.length === 0 ||
+            selectedSessions.includes(session);
 
-</div>
-
-<h3 class="font-bold text-lg mb-3">
-${file.title}
-</h3>
-
-<a href="${file.url}" target="_blank">
-
-<button class="w-full bg-primary text-white py-3 rounded-lg">
-
-Download PDF
-
-</button>
-
-</a>
-
-</div>
-
-`;
-
-        });
+        card.style.display =
+            (category === navbarCategory && sessionMatch)
+                ? "flex"
+                : "none";
 
     });
 
-
-
-setInterval(() => {
-
-    fetch("api/get_downloads.php");
-
-}, 3600000);
+}
