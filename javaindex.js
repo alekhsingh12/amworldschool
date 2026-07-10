@@ -88,10 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const padded = String(index).padStart(3, "0");
 
         if (isMobile) {
-            return `../frames mobile/mezgif-frame-${padded}.jpg`;
+            return `mezgif-frame-${padded}.jpg`;
         }
 
-        return `../frames/ezgif-frame-${padded}.jpg`;
+        return `ezgif-frame-${padded}.jpg`;
     };
 
     // Render a specific image on the canvas matching cover aspect ratio
