@@ -74,7 +74,7 @@ function activateCurrentPage() {
         "downloads.html": "Downloads",
         "news.html": "News",
         "events.html": "Events",
-        "contact.html": "Contact",
+        "contact_us.html": "Contact Us",
         "login.html": "Login"
     };
 
