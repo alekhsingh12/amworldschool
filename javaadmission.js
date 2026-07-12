@@ -1,5 +1,5 @@
 // Simple micro-interaction for form submission
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyQBylSNRc8lda7PX2XofN9rT9LTG36_i2kvjfXtLmovrLidqLFcZVTT6aPN9mcXUerYQ/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbznu3R-axi9bKqdK8TiX79UqYJ7NROxxj6S96RgRMCo3wBXHh9pLijWUZLvKzJz-5J3/exec";
 
 const form = document.querySelector("form");
 
@@ -31,13 +31,13 @@ form.addEventListener("submit", async (e) => {
     try {
 
         await fetch(SCRIPT_URL, {
-            method: "POST",
-            redirect: "follow",
-            headers: {
-                "Content-Type": "text/plain;charset=utf-8"
-            },
-            body: JSON.stringify(data)
-        });
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+        "Content-Type": "text/plain"
+    },
+    body: JSON.stringify(data)
+});
 
         btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Application Submitted!';
         btn.classList.remove("bg-primary-container");
