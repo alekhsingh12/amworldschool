@@ -268,28 +268,28 @@
                             <!-- Field 1 -->
                             <div class="space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Student Name*</label>
-                                <input
+                                <input name="studentName"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all"
                                     placeholder="Student Name" required="" type="text" />
                             </div>
                             <!-- Field 2 -->
                             <div class="space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Father's Name*</label>
-                                <input
+                                <input name="fatherName"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all"
                                     placeholder="Father's Name" required="" type="text" />
                             </div>
                             <!-- Field 3 -->
                             <div class="space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Mother's Name</label>
-                                <input
+                                <input name="motherName"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all"
                                     placeholder="Mother's Name" type="text" />
                             </div>
                             <!-- Field 4 -->
                             <div class="space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Date of Birth*</label>
-                                <input
+                                <input name="dob"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all"
                                     required="" type="date" />
                             </div>
@@ -297,21 +297,21 @@
                             <div class="space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Father Contact
                                     Number*</label>
-                                <input
+                                <input name="fatherPhone"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all"
                                     placeholder="Primary mobile number" required="" type="tel" />
                             </div>
                             <!-- Field 6 -->
                             <div class="space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Mother Contact Number</label>
-                                <input
+                                <input name="motherPhone"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all"
                                     placeholder="Secondary mobile number" type="tel" />
                             </div>
                             <!-- Field 7 -->
                             <div class="space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Gender</label>
-                                <select
+                                <select name="gender"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all">
                                     <option>Select Gender</option>
                                     <option>Male</option>
@@ -322,7 +322,7 @@
                             <!-- Field 8 -->
                             <div class="space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Religion</label>
-                                <select
+                                <select name="religion"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all">
                                     <option>Select Religion</option>
                                     <option>Hindu</option>
@@ -337,7 +337,7 @@
                             <!-- Field 9 -->
                             <div class="space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Category</label>
-                                <select
+                                <select name="category"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all">
                                     <option>Select Category</option>
                                     <option>General</option>
@@ -351,7 +351,7 @@
                             <!-- Field 10 -->
                             <div class="space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Admission Class*</label>
-                                <select
+                                <select name="admissionClass"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all">
                                     <option>Nursery</option>
                                     <option>LKG</option>
@@ -373,27 +373,27 @@
                             <!-- Field 11 -->
                             <div class="md:col-span-2 space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Previous School</label>
-                                <input
+                                <input name="previousSchool"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all"
                                     placeholder="Name of last attended institution" type="text" />
                             </div>
                             <!-- Field 12 & 13 -->
                             <div class="space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Medium</label>
-                                <input
+                                <input name="medium"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all"
                                     placeholder="English/Hindi/Other" type="text" />
                             </div>
                             <div class="space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Previous Class</label>
-                                <input
+                                <input name="previousClass"
                                     class="w-full h-12 bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 font-body-md transition-all"
                                     placeholder="Last grade completed" type="text" />
                             </div>
                             <!-- Field 14 -->
                             <div class="md:col-span-2 space-y-2">
                                 <label class="font-label-md text-on-surface-variant block">Address</label>
-                                <textarea
+                                <textarea name="address"
                                     class="w-full bg-surface-container border-outline rounded-lg focus:ring-primary focus:border-primary px-4 py-2 font-body-md transition-all"
                                     placeholder="Full residential address" rows="3"></textarea>
                             </div>
@@ -425,19 +425,7 @@
     <script src="include.js"></script>
     <script src="javamobilemenu.js"></script>
     <script>
-        // Simple form interaction
-        document.querySelector('form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalContent = btn.innerHTML;
-            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Submitting...';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Application Sent!';
-                btn.classList.replace('bg-primary-container', 'bg-green-600');
-            }, 1500);
-        });
+        
 
         // Navigation scroll effect
         window.addEventListener('scroll', () => {
