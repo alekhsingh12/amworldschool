@@ -1,5 +1,5 @@
 // Simple micro-interaction for form submission
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbznu3R-axi9bKqdK8TiX79UqYJ7NROxxj6S96RgRMCo3wBXHh9pLijWUZLvKzJz-5J3/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxBNNoZbP0UvIBUUMXBUKCM6xl2hneB4OSD8VsJzMLA3Hyw7ECoA9E7Vxf9sEAg2EPF/exec";
 
 const form = document.querySelector("form");
 
