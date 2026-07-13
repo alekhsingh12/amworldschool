@@ -262,7 +262,7 @@ flex flex-col md:block">
                             </div>
                         </div>
                         <button id="sortLatestBtn" title="Latest First"
-                            class="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-3 bg-surface-muted border border-outline-variant rounded-lg hover:bg-surface-variant transition-colors">
+                            class="flex-1 md:flex-none md:w-44 flex items-center justify-center gap-2 px-4 py-3 bg-surface-muted border border-outline-variant rounded-lg hover:bg-surface-variant transition-colors whitespace-nowrap">
                             <span class="material-symbols-outlined" data-icon="sort">sort</span>
                             Latest First
                         </button>
@@ -273,449 +273,59 @@ flex flex-col md:block">
         <!-- Main Content: Downloads Grid -->
         <section class="pb-24 pt-8 bg-surface">
             <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+
+                <!-- Result Count -->
+                <div class="mb-6">
+                    <p id="resultCount" class="text-gray-600 font-medium"></p>
+                </div>
+
+                <!-- Downloads Grid -->
                 <div id="downloadsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-                    <!-- Document Card 1 -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="calendar" data-session="2026-27">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">July 3, 2026</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Academic Calendar 2026-27
+
+                    <div id="loadingCards" class="col-span-full flex flex-col items-center justify-center py-20">
+
+                        <!-- <span class="material-symbols-outlined text-6xl text-primary animate-spin">
+                            progress_activity
+                        </span> -->
+
+                        <h3 class="text-2xl font-bold mt-6">
+                            Please wait...
                         </h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Complete schedule of terms, holidays, examinations, and major school events for the upcoming
-                            academic session.
+
+                        <p class="text-gray-500 mt-2">
+                            Loading documents...
                         </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="School Planner.pdf">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
+
                     </div>
-                    <!-- Document Card 2 — Academic Book List 2026-27  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="book" data-session="2026-27">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">March 24, 2026</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Academic Book List (Session:
-                            2026-27)</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Complete Academic Book List for all grades for the session 2026-27.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/70726612_69c263f566915.pdf"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 3 — Fee Structure 2026-27  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="fee" data-session="2026-27">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">January 5, 2026</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">School Fees Structure
-                            (Session: 2026-27)</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Detailed breakdown of registration fee, admission fee and composite fee for the session
-                            2026-27.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/91111537_695b5e5ba1bcc.png"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 4 — Fee Structure 2025-26  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="fee" data-session="2025-26">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">March 1, 2025</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">School Fees Structure
-                            (Session: 2025-26)</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Detailed breakdown of registration fee, admission fee and composite fee for the session
-                            2025-26.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/26434969_67ca9d8a6d392.jpeg"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 5 — Land Certificate  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="mandatory" data-session="">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">Aug 06, 2025</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Land Certificate</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Official land certificate document for AM World School's campus property.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/86430318_6893219e8f500.pdf"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 6 — Building Safety Certificate  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="mandatory" data-session="">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">Jul 04, 2025</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Building Safety Certificate
-                        </h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Certified building safety document confirming structural safety compliance of the school
-                            premises.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/33118241_68674e992c8d9.pdf"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 7 — Mandatory Disclosure  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="mandatory" data-session="">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">Jul 04, 2025</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Mandatory Disclosure</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            CBSE mandatory disclosure document containing all required school information as per
-                            affiliation norms.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/8182864_68674ca25354d.pdf"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 8 — Parent Teacher Association  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="mandatory" data-session="">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">Mar 08, 2025</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Parent Teacher Association of
-                            AM World School</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Official document for the Parent Teacher Association (PTA) of AM World School.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/55742979_67cbda386dc97.jpeg"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 9 — Staff Detail  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="mandatory" data-session="">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">Mar 07, 2025</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Staff Detail</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Comprehensive details of all teaching and non-teaching staff members at AM World School.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/32711179_67ca9cf048c5c.pdf"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 10 — Fire Safety Certificate  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="mandatory" data-session="">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">Mar 07, 2025</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Fire Safety Certificate</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Fire safety compliance certificate issued by the competent authority for the school
-                            premises.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/41337892_67ca9c4099df8.pdf"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 11 — Trust Lease Deed  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="mandatory" data-session="">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">Apr 19, 2024</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Trust Lease Deed</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Legal trust lease deed document pertaining to the school's property and trust registration.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/16260494_TRUST_LEESE_DEED.pdf"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 12 — Recognition Certificate RTE  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="mandatory" data-session="">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">Apr 19, 2024</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Recognition Certificate (RTE)
-                        </h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Official recognition certificate under the Right to Education (RTE) Act issued by the state
-                            government.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/19723295__CERTIFICATE_RTE.pdf"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 13 — Sanitary and Drinking Water  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="mandatory" data-session="">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">Apr 13, 2024</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Sanitary and Drinking Water
-                            Certificate</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Certificate confirming adequate sanitation and safe drinking water facilities available on
-                            campus.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/29282172_67d7df07cd06f.pdf"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 14 — List of School Management Committee SMC  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="mandatory" data-session="">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">Dec 26, 2023</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">List of School Management
-                            Committee (SMC)</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Official list of members of the School Management Committee (SMC) as required by CBSE norms.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/21011234_list.jpg"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 15 — Copies of Affiliation/Upgradation Letter  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="mandatory" data-session="">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">Dec 26, 2023</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Copies of Affiliation /
-                            Upgradation Letter</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            Official CBSE affiliation and upgradation letter for the period 2023-2028.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/87561746_LETTER_2023-2028.pdf"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Document Card 16 — Copy of No Objection Certificate NOC  -->
-                    <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
-                        data-category="mandatory" data-session="">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-12 h-16 bg-red-50 rounded-md border-2 border-primary/20 flex items-center justify-center relative group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="picture_as_pdf"
-                                    style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-                            </div>
-                            <span class="text-on-surface-variant font-label-md text-label-md">Dec 26, 2023</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Copy of No Objection
-                            Certificate (NOC)</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-auto leading-relaxed">
-                            No Objection Certificate (NOC) issued by the state government for establishing and operating
-                            the school.
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-outline-variant/20">
-                            <a href="https://schooldata.blr1.digitaloceanspaces.com/newschool/amworldschool/website_management/37954951_A_NOC_17.12.2018.pdf"
-                                target="_blank">
-                                <button
-                                    class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-fixed-variant transition-colors group-hover:shadow-lg">
-                                    <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
-                                    Download PDF
-                                </button>
-                            </a>
-                        </div>
-                    </div>
+
+                </div>
+
+                <!-- No Results -->
+                <div id="noResults" class="hidden text-center py-16">
+
+                    <span class="material-symbols-outlined text-6xl text-gray-400">
+                        description
+                    </span>
+
+                    <h3 class="text-2xl font-bold mt-4">
+                        No documents found
+                    </h3>
+
+                    <p class="text-gray-500 mt-2">
+                        Try changing your search or filters.
+                    </p>
 
 
 
+                </div>
+            </div>
+        </section>
 
-                    <!-- Document Card Template -->
 
-                    <!-- <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
+
+        <!-- Document Card Template -->
+
+        <!-- <div class="group bg-white rounded-xl border border-outline-variant/30 p-6 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1 pdf-card-shadow"
                         data-category="book" data-session="20XX-XX">
                         <div class="flex items-start justify-between mb-6">
                             <div
@@ -753,9 +363,9 @@ flex flex-col md:block">
 
 
 
-                    <!-- Format -->
+        <!-- Format -->
 
-                    <!-- data-category="calendar"
+        <!-- data-category="calendar"
 data-session="2026-27"
 
 data-category="fee"
@@ -796,9 +406,6 @@ data-session="2026-27" -->
 
 
 
-                </div>
-            </div>
-        </section>
         <!-- Newsletter / Quick Help CTA -->
         <section class="py-12 bg-surface-container-high border-t border-outline-variant/20">
             <div
@@ -850,6 +457,7 @@ data-session="2026-27" -->
     <script src="include.js"></script>
     <script src="javamobilemenu.js"></script>
 
+    <!-- <script src="javadownloadsold.js"></script> -->
     <script src="javadownloads.js"></script>
 </body>
 

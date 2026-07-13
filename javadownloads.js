@@ -1,134 +1,357 @@
-window.addEventListener('error', (e) => {
-    fetch('/error?msg=' + encodeURIComponent(e.message + ' at ' + e.filename + ':' + e.lineno));
+// =========================
+// CONFIG
+// =========================
+
+const API_URL = "https://script.google.com/macros/s/AKfycbzXCnkmq7xRj1_Wf3GXboZiF9O1qKIVgBD-YYMkUmSlygnExXrxG49OyKCqETv6rF7K/exec";
+
+// =========================
+// GLOBAL VARIABLES
+// =========================
+
+let allDocuments = [];
+let filteredDocuments = [];
+
+let currentSearch = "";
+let currentSort = "latest";
+
+let selectedCategories = [];
+let selectedSessions = [];
+
+
+// =========================
+// DOM
+// =========================
+
+const downloadsGrid = document.getElementById("downloadsGrid");
+const resultCount = document.getElementById("resultCount");
+const noResults = document.getElementById("noResults");
+
+const searchInput =
+    document.querySelector('input[placeholder*="Search"]');
+
+const sortBtn =
+    document.getElementById("sortLatestBtn");
+
+const filterBtn =
+    document.getElementById("filterBtn");
+
+const filterBox =
+    document.getElementById("filterBox");
+
+
+// =========================
+// LOAD DOCUMENTS
+// =========================
+
+async function loadDocuments() {
+
+    try {
+
+        const response = await fetch(API_URL);
+
+        allDocuments = await response.json();
+
+        filteredDocuments = [...allDocuments];
+
+        document.getElementById("loadingCards").remove();
+
+
+
+        // Navbar category support
+        const params = new URLSearchParams(window.location.search);
+        const navbarCategory = params.get("category");
+
+        if (navbarCategory) {
+
+            const checkbox = document.querySelector(
+                `.category[value="${navbarCategory}"]`
+            );
+
+            if (checkbox) {
+                checkbox.checked = true;
+                selectedCategories = [navbarCategory];
+                updateFilterButton();
+            }
+        }
+
+
+
+        applyFilters();
+
+
+
+        console.log(allDocuments);
+
+    }
+
+    catch (err) {
+
+        console.error(err);
+
+        downloadsGrid.innerHTML = `
+        <div class="col-span-full text-center py-20">
+
+            <span class="material-symbols-outlined text-6xl text-red-500">
+                error
+            </span>
+
+            <h3 class="text-2xl font-bold mt-6">
+                Unable to load documents
+            </h3>
+
+            <p class="text-gray-500 mt-2">
+                Please check your internet connection and try again.
+            </p>
+
+        </div>
+    `;
+
+    }
+
+}
+
+loadDocuments();
+
+
+
+
+function createCard(doc) {
+
+    const uploadDate = new Date(doc.Date).toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+    });
+
+    return `
+
+    <div class="group bg-surface rounded-xl border border-outline-variant p-6 flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+
+        data-category="${doc.Category}"
+        data-session="${doc.Session || ""}"
+        data-date="${doc.Date}">
+
+        <div class="flex items-start gap-4">
+
+            <!-- PDF Icon -->
+            <div class="w-14 h-14 rounded-xl bg-red-100 flex items-center justify-center flex-shrink-0">
+
+                <span class="material-symbols-outlined text-red-600 text-3xl">
+                    description
+                </span>
+
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1">
+
+                <h3 class="font-heading-lg text-on-surface font-bold mb-2">
+                    ${doc.Title}
+                </h3>
+
+                <p class="font-body-md text-on-surface-variant mb-4">
+                    ${doc.Description}
+                </p>
+
+                <div class="flex items-center gap-2 text-on-surface-variant mb-5">
+
+                    <span class="material-symbols-outlined text-base">
+                        calendar_today
+                    </span>
+
+                    <span class="font-label-md">
+                        ${uploadDate}
+                    </span>
+
+                </div>
+
+                <a
+                    href="${doc["Download Link"]}"
+                    target="_blank"
+                    class="inline-flex items-center gap-2 h-11 px-5 rounded-lg bg-primary text-on-primary hover:bg-rose-700 transition">
+
+                    <span class="material-symbols-outlined">
+                        download
+                    </span>
+
+                    Download
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    `;
+}
+
+
+function renderCards(data) {
+
+    downloadsGrid.innerHTML = "";
+
+    data.forEach(doc => {
+
+        downloadsGrid.innerHTML += createCard(doc);
+
+    });
+
+}
+
+function applyFilters() {
+
+    filteredDocuments = allDocuments.filter(doc => {
+
+        // Search
+        const matchesSearch =
+            currentSearch === "" ||
+            doc.Title.toLowerCase().includes(currentSearch) ||
+            doc.Description.toLowerCase().includes(currentSearch);
+
+        // Category
+        const matchesCategory =
+            selectedCategories.length === 0 ||
+            selectedCategories.includes(doc.Category);
+
+        // Session
+        const matchesSession =
+            selectedSessions.length === 0 ||
+            selectedSessions.includes(doc.Session);
+
+        return matchesSearch &&
+            matchesCategory &&
+            matchesSession;
+
+    });
+
+    // Sorting
+    switch (currentSort) {
+
+        case "latest":
+
+            filteredDocuments.sort((a, b) =>
+                new Date(b.Date) - new Date(a.Date));
+
+            break;
+
+        case "oldest":
+
+            filteredDocuments.sort((a, b) =>
+                new Date(a.Date) - new Date(b.Date));
+
+            break;
+
+        case "az":
+
+            filteredDocuments.sort((a, b) =>
+                a.Title.localeCompare(b.Title));
+
+            break;
+
+        case "za":
+
+            filteredDocuments.sort((a, b) =>
+                b.Title.localeCompare(a.Title));
+
+            break;
+
+    }
+
+    renderCards(filteredDocuments);
+
+    resultCount.textContent =
+        `Showing ${filteredDocuments.length} of ${allDocuments.length} documents`;
+
+    noResults.classList.toggle(
+        "hidden",
+        filteredDocuments.length !== 0
+    );
+
+}
+
+
+searchInput.addEventListener("input", (e) => {
+
+    currentSearch =
+        e.target.value.trim().toLowerCase();
+
+    applyFilters();
+
 });
 
-const filterBtn = document.getElementById("filterBtn");
-const filterBox = document.getElementById("filterBox");
+sortBtn.addEventListener("click", () => {
 
+    const order = ["latest", "oldest", "az", "za"];
+
+    const labels = {
+        latest: "Latest First",
+        oldest: "Oldest First",
+        az: "A - Z",
+        za: "Z - A"
+    };
+
+    let index = order.indexOf(currentSort);
+    index = (index + 1) % order.length;
+
+    currentSort = order[index];
+
+    // Change button text
+    sortBtn.textContent = labels[currentSort];
+
+    // Active styling
+    sortBtn.classList.add(
+        "bg-primary",
+        "text-on-primary",
+        "border-primary",
+        "hover:bg-rose-500"
+    );
+
+    applyFilters();
+
+});
+
+
+
+// =========================
+// FILTER POPUP
+// =========================
+
+const closeFilter = document.getElementById("closeFilter");
+const applyFilterBtn = document.getElementById("applyFilter");
+const clearFilterBtn = document.getElementById("clearFilter");
+
+// Open popup
 filterBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    filterBox.classList.toggle("hidden");
+    filterBox.classList.remove("hidden");
 });
 
-document.addEventListener("click", (e) => {
-    const isInsideFilterContent = filterBox.contains(e.target) && e.target !== filterBox;
-    const isInsideFilterBtn = filterBtn.contains(e.target);
-    fetch(`/log?msg=docClick_target_${e.target.tagName}_id_${e.target.id}_insideContent_${isInsideFilterContent}_insideBtn_${isInsideFilterBtn}`);
-    if (
-        !isInsideFilterContent &&
-        !isInsideFilterBtn
-    ) {
+// Close popup
+closeFilter.addEventListener("click", () => {
+    filterBox.classList.add("hidden");
+});
+
+// Close when clicking outside
+filterBox.addEventListener("click", (e) => {
+    if (e.target === filterBox) {
         filterBox.classList.add("hidden");
     }
 });
 
-
-// Simple micro-interaction for document cards
-document.querySelectorAll('.group').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        // Potential for more advanced GSAP or Framer-like animations if needed
-    });
-});
-
-// Search filtering logic simulation
-const searchInput = document.querySelector('input[placeholder*="Search documents"]');
-searchInput.addEventListener('input', (e) => {
-    const query = e.target.value.toLowerCase();
-    const cards = document.querySelectorAll('.grid > div');
-
-    cards.forEach(card => {
-        const title = card.querySelector('h3').textContent.toLowerCase();
-        const desc = card.querySelector('p').textContent.toLowerCase();
-        if (title.includes(query) || desc.includes(query)) {
-            card.style.display = 'flex';
-            card.style.opacity = '1';
-        } else {
-            card.style.display = 'none';
-            card.style.opacity = '0';
-        }
-    });
-});
-
-
-const sortBtn = document.getElementById("sortLatestBtn");
-const grid = document.getElementById("downloadsGrid");
-
-// Store the original order
-const originalCards = Array.from(grid.children);
-
-let latestFirstOn = false;
-
-sortBtn.addEventListener("click", () => {
-    latestFirstOn = !latestFirstOn;
-
-    if (latestFirstOn) {
-        // Sort latest first
-        const cards = Array.from(grid.children);
-
-        cards.sort((a, b) => {
-            const dateA = new Date(
-                a.querySelector(".text-on-surface-variant.font-label-md").textContent.trim()
-            );
-            const dateB = new Date(
-                b.querySelector(".text-on-surface-variant.font-label-md").textContent.trim()
-            );
-
-            return dateB - dateA;
-        });
-
-        cards.forEach(card => grid.appendChild(card));
-
-        // Turn button red
-        sortBtn.classList.remove(
-            "bg-surface-muted",
-            "border-outline-variant",
-            "text-on-surface"
-        );
-        sortBtn.classList.add(
-            "bg-primary",
-            "text-on-primary",
-            "border-primary",
-            "hover:bg-rose-500"
-        );
-
-    } else {
-        // Restore original order
-        originalCards.forEach(card => grid.appendChild(card));
-
-        // Restore original button color
-        sortBtn.classList.remove(
-            "bg-primary",
-            "text-on-primary",
-            "border-primary",
-            "hover:bg-rose-500"
-        );
-        sortBtn.classList.add(
-            "bg-surface-muted",
-            "border-outline-variant",
-            "text-on-surface"
-        );
-    }
-});
-
-
-
-
+// Highlight Filter button when active
 function updateFilterButton() {
 
-    const hasCategory =
-        document.querySelectorAll(".category:checked").length > 0;
-
-    const hasSession =
-        document.querySelectorAll(".session:checked").length > 0;
-
-    const active = hasCategory || hasSession;
+    const active =
+        selectedCategories.length > 0 ||
+        selectedSessions.length > 0;
 
     if (active) {
 
         filterBtn.classList.remove(
             "bg-surface-muted",
-            "border-outline-variant",
-            "text-on-surface"
+            "border-outline-variant"
         );
 
         filterBtn.classList.add(
@@ -149,150 +372,45 @@ function updateFilterButton() {
 
         filterBtn.classList.add(
             "bg-surface-muted",
-            "border-outline-variant",
-            "text-on-surface"
+            "border-outline-variant"
         );
-
     }
 }
 
+// Apply Filters
+applyFilterBtn.addEventListener("click", () => {
 
-const selectedCategories = [
-    ...document.querySelectorAll(".category:checked")
-].map(item => item.value);
-
-const selectedSessions = [
-    ...document.querySelectorAll(".session:checked")
-].map(item => item.value);
-
-document.querySelectorAll("#downloadsGrid > div").forEach(card => {
-
-    const category = card.dataset.category;
-    const session = card.dataset.session;
-
-    const categoryMatch =
-        selectedCategories.length === 0 ||
-        selectedCategories.includes(category);
-
-    const sessionMatch =
-        selectedSessions.length === 0 ||
-        selectedSessions.includes(session);
-
-    card.style.display =
-        categoryMatch && sessionMatch ? "flex" : "none";
-});
-
-document.getElementById("applyFilter").addEventListener("click", () => {
-
-    const selectedCategories =
+    selectedCategories =
         [...document.querySelectorAll(".category:checked")]
             .map(item => item.value);
 
-    const selectedSessions =
+    selectedSessions =
         [...document.querySelectorAll(".session:checked")]
             .map(item => item.value);
 
-    document.querySelectorAll("#downloadsGrid > div").forEach(card => {
+    updateFilterButton();
 
-        const category = card.dataset.category;
-        const session = card.dataset.session;
-
-        const categoryMatch =
-            selectedCategories.length === 0 ||
-            selectedCategories.includes(category);
-
-        const sessionMatch =
-            selectedSessions.length === 0 ||
-            selectedSessions.includes(session);
-
-        card.style.display =
-            categoryMatch && sessionMatch ? "flex" : "none";
-    });
+    applyFilters();
 
     filterBox.classList.add("hidden");
 });
 
-updateFilterButton();
+// Clear Filters
+clearFilterBtn.addEventListener("click", () => {
 
-document.getElementById("clearFilter").addEventListener("click", () => {
+    document
+        .querySelectorAll(".category")
+        .forEach(c => c.checked = false);
 
-    document.querySelectorAll(".category").forEach(c => c.checked = false);
+    document
+        .querySelectorAll(".session")
+        .forEach(c => c.checked = false);
 
-    document.querySelectorAll(".session").forEach(c => c.checked = false);
-
-    document.querySelectorAll("#downloadsGrid > div").forEach(card => {
-        card.style.display = "flex";
-    });
-
-    updateFilterButton();
-});
-
-updateFilterButton();
-
-document.querySelectorAll(".category, .session").forEach(input => {
-    input.addEventListener("change", updateFilterButton);
-});
-
-
-
-const closeFilter = document.getElementById("closeFilter");
-
-if (closeFilter) {
-    closeFilter.addEventListener("click", (e) => {
-        e.stopPropagation();
-        fetch('/log?msg=closeFilter_clicked');
-        filterBox.classList.add("hidden");
-    });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Filter from navbar dropdown
-const params = new URLSearchParams(window.location.search);
-const navbarCategory = params.get("category");
-
-if (navbarCategory) {
-
-    // Check the corresponding checkbox
-    document.querySelectorAll(".category").forEach(box => {
-        box.checked = (box.value === navbarCategory);
-    });
+    selectedCategories = [];
+    selectedSessions = [];
 
     updateFilterButton();
 
-    // Filter cards
-    document.querySelectorAll("#downloadsGrid > div").forEach(card => {
+    applyFilters();
+});
 
-        const category = card.dataset.category;
-        const session = card.dataset.session;
-
-        const selectedSessions = [
-            ...document.querySelectorAll(".session:checked")
-        ].map(item => item.value);
-
-        const sessionMatch =
-            selectedSessions.length === 0 ||
-            selectedSessions.includes(session);
-
-        card.style.display =
-            (category === navbarCategory && sessionMatch)
-                ? "flex"
-                : "none";
-
-    });
-
-}
