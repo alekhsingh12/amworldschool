@@ -268,7 +268,7 @@ body {
    Desktop remains unchanged
 =========================== */
 
-@media screen and (max-width:1020px) {
+@media screen and (max-width:1150px) {
 
         /* html,
                         body {
@@ -419,7 +419,7 @@ body {
 
 }
 
-@media (max-width:1020px) {
+@media (max-width:1150px) {
 
         .glass-nav {
 
