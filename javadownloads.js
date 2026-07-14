@@ -212,8 +212,10 @@ function applyFilters() {
 
         // Category
         const matchesCategory =
-            selectedCategories.length === 0 ||
-            selectedCategories.includes(doc.Category);
+    selectedCategories.length === 0 ||
+    selectedCategories.some(category =>
+        doc.Category.split(",").map(c => c.trim()).includes(category)
+    );
 
         // Session
         const matchesSession =
