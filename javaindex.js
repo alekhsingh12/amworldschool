@@ -59,6 +59,82 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    // =========================
+    // Drag / Swipe Support
+    // =========================
+
+
+
+
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+
+    // Mouse
+    slider.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        currentX = startX;
+        document.body.style.userSelect = "none";
+        slider.style.cursor = "grabbing";
+    });
+
+    window.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        currentX = e.clientX;
+    });
+
+    window.addEventListener("mouseup", () => {
+        if (!isDragging) return;
+
+        isDragging = false;
+        document.body.style.userSelect = "";
+        slider.style.cursor = "grab";
+
+        const diff = currentX - startX;
+
+        if (Math.abs(diff) > 60) {
+            if (diff > 0) {
+                current = (current - 1 + totalSlides) % totalSlides;
+            } else {
+                current = (current + 1) % totalSlides;
+            }
+
+            showSlide(current);
+            restartAuto();      // Restart 4-second timer
+        }
+    });
+
+    // Touch
+    slider.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    slider.addEventListener("touchend", (e) => {
+
+        const endX = e.changedTouches[0].clientX;
+        const diff = endX - startX;
+
+        if (Math.abs(diff) > 60) {
+            if (diff > 0) {
+                current = (current - 1 + totalSlides) % totalSlides;
+            } else {
+                current = (current + 1) % totalSlides;
+            }
+
+            showSlide(current);
+            restartAuto();      // Restart 4-second timer
+        }
+
+    }, { passive: true });
+
+    // Show grab cursor
+    slider.style.cursor = "grab";
+
+
+
+
+
 
 
 
@@ -88,10 +164,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const padded = String(index).padStart(3, "0");
 
         if (isMobile) {
-            return `mezgif-frame-${padded}.jpg`;
+            return `../frames mobile/mezgif-frame-${padded}.jpg`;
         }
 
-        return `ezgif-frame-${padded}.jpg`;
+        return `../frames/ezgif-frame-${padded}.jpg`;
     };
 
     // Render a specific image on the canvas matching cover aspect ratio
@@ -240,8 +316,4 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", onScroll);
     window.addEventListener("resize", onResize);
 });
-
-
-
-
 
