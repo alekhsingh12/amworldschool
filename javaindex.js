@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         showSlide(current + 1);
 
-    }, 4000);
+    }, 6000);
 
     function restartAuto() {
 
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             showSlide(current + 1);
 
-        }, 4000);
+        }, 6000);
 
     }
 
